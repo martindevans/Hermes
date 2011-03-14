@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a373fd85-0dc9-4e0b-9ab1-e5e889fd11d2" name="Martin@MARTIN-LAPTOP 2011-03-14 14:14:14" runUser="Martin-Laptop\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-LAPTOP 2011-03-14 14_14_14">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-14T14:14:14.6836617+00:00" queuing="2011-03-14T14:14:14.6946623+00:00" start="2011-03-14T14:14:14.7846674+00:00" finish="2011-03-14T14:14:15.7477225+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DoNotMatchAString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="7db13936-f24b-55c4-155e-f656c106b534">
+      <Execution id="82fe8464-086b-429a-b826-cce454eb97f9" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoNotMatchAString" />
+    </UnitTest>
+    <UnitTest name="ConstructTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="9e077d99-7ec2-e148-8b6d-478518f7d60a">
+      <Execution id="e81998dd-e1f2-4461-9def-8c9f9f284470" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructTerminal" />
+    </UnitTest>
+    <UnitTest name="MatchAString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="e5138bd5-d1a4-9de0-f29b-b05afabb475e">
+      <Execution id="f8769cd0-2c28-4684-8cc2-b35d7871fda7" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MatchAString" />
+    </UnitTest>
+    <UnitTest name="DoNotMatchAStringNotAtIndexZero" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="309abaef-5e7a-21da-1899-85ef214de9da">
+      <Execution id="8bc2efb1-1079-4894-a843-c401aecfd15e" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoNotMatchAStringNotAtIndexZero" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="309abaef-5e7a-21da-1899-85ef214de9da" executionId="8bc2efb1-1079-4894-a843-c401aecfd15e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7db13936-f24b-55c4-155e-f656c106b534" executionId="82fe8464-086b-429a-b826-cce454eb97f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e077d99-7ec2-e148-8b6d-478518f7d60a" executionId="e81998dd-e1f2-4461-9def-8c9f9f284470" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5138bd5-d1a4-9de0-f29b-b05afabb475e" executionId="f8769cd0-2c28-4684-8cc2-b35d7871fda7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8bc2efb1-1079-4894-a843-c401aecfd15e" testId="309abaef-5e7a-21da-1899-85ef214de9da" testName="DoNotMatchAStringNotAtIndexZero" computerName="MARTIN-LAPTOP" duration="00:00:00.0177494" startTime="2011-03-14T14:14:14.9816787+00:00" endTime="2011-03-14T14:14:15.4197038+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8bc2efb1-1079-4894-a843-c401aecfd15e">
+    </UnitTestResult>
+    <UnitTestResult executionId="82fe8464-086b-429a-b826-cce454eb97f9" testId="7db13936-f24b-55c4-155e-f656c106b534" testName="DoNotMatchAString" computerName="MARTIN-LAPTOP" duration="00:00:00.0002836" startTime="2011-03-14T14:14:15.4337046+00:00" endTime="2011-03-14T14:14:15.4547058+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82fe8464-086b-429a-b826-cce454eb97f9">
+    </UnitTestResult>
+    <UnitTestResult executionId="e81998dd-e1f2-4461-9def-8c9f9f284470" testId="9e077d99-7ec2-e148-8b6d-478518f7d60a" testName="ConstructTerminal" computerName="MARTIN-LAPTOP" duration="00:00:00.0002123" startTime="2011-03-14T14:14:15.4607061+00:00" endTime="2011-03-14T14:14:15.4987083+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e81998dd-e1f2-4461-9def-8c9f9f284470">
+    </UnitTestResult>
+    <UnitTestResult executionId="f8769cd0-2c28-4684-8cc2-b35d7871fda7" testId="e5138bd5-d1a4-9de0-f29b-b05afabb475e" testName="MatchAString" computerName="MARTIN-LAPTOP" duration="00:00:00.0002925" startTime="2011-03-14T14:14:15.5017085+00:00" endTime="2011-03-14T14:14:15.5537114+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8769cd0-2c28-4684-8cc2-b35d7871fda7">
+    </UnitTestResult>
+  </Results>
+</TestRun>

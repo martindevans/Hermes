@@ -1,0 +1,5 @@
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.pdb
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\obj\Debug\Hermes.dll
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\obj\Debug\Hermes.pdb

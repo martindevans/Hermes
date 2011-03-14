@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="427afa04-1c33-4816-9e55-57f94d7046e8" name="Martin@MARTIN-LAPTOP 2011-03-14 14:15:13" runUser="Martin-Laptop\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-LAPTOP 2011-03-14 14_15_13">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-14T14:15:13.4300218+00:00" queuing="2011-03-14T14:15:13.4390223+00:00" start="2011-03-14T14:15:13.5360278+00:00" finish="2011-03-14T14:15:14.8421025+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="5" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ConstructTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="9e077d99-7ec2-e148-8b6d-478518f7d60a">
+      <Execution id="77dbaa1f-60c9-4b8f-982c-9eab5cb1fdfb" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructTerminal" />
+    </UnitTest>
+    <UnitTest name="DoNotMatchAString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="7db13936-f24b-55c4-155e-f656c106b534">
+      <Execution id="12878eec-0860-4983-ac26-0738e5ef3781" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoNotMatchAString" />
+    </UnitTest>
+    <UnitTest name="DoNotMatchAStringNotAtIndexZero" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="309abaef-5e7a-21da-1899-85ef214de9da">
+      <Execution id="a81d2351-9670-4445-8193-9b1038700788" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoNotMatchAStringNotAtIndexZero" />
+    </UnitTest>
+    <UnitTest name="MatchAString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="e5138bd5-d1a4-9de0-f29b-b05afabb475e">
+      <Execution id="c02c5b5b-adf9-4f8b-8ee1-4a4e3cb92077" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MatchAString" />
+    </UnitTest>
+    <UnitTest name="ReadATokenStream" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="c42d1a27-9e17-6c70-addc-282c3e2e07b2">
+      <Execution id="3fb1af28-70f2-4559-91d6-5e6099621185" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TokenStreamTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadATokenStream" />
+    </UnitTest>
+    <UnitTest name="ConstructATokenStream" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="b913fb65-7c23-6014-39cd-78d4c3556155">
+      <Execution id="9989442e-b531-4744-9fa9-63abbeb19e7a" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TokenStreamTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructATokenStream" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="309abaef-5e7a-21da-1899-85ef214de9da" executionId="a81d2351-9670-4445-8193-9b1038700788" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7db13936-f24b-55c4-155e-f656c106b534" executionId="12878eec-0860-4983-ac26-0738e5ef3781" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e077d99-7ec2-e148-8b6d-478518f7d60a" executionId="77dbaa1f-60c9-4b8f-982c-9eab5cb1fdfb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b913fb65-7c23-6014-39cd-78d4c3556155" executionId="9989442e-b531-4744-9fa9-63abbeb19e7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c42d1a27-9e17-6c70-addc-282c3e2e07b2" executionId="3fb1af28-70f2-4559-91d6-5e6099621185" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5138bd5-d1a4-9de0-f29b-b05afabb475e" executionId="c02c5b5b-adf9-4f8b-8ee1-4a4e3cb92077" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a81d2351-9670-4445-8193-9b1038700788" testId="309abaef-5e7a-21da-1899-85ef214de9da" testName="DoNotMatchAStringNotAtIndexZero" computerName="MARTIN-LAPTOP" duration="00:00:00.0445028" startTime="2011-03-14T14:15:13.8350449+00:00" endTime="2011-03-14T14:15:14.2510687+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a81d2351-9670-4445-8193-9b1038700788">
+    </UnitTestResult>
+    <UnitTestResult executionId="12878eec-0860-4983-ac26-0738e5ef3781" testId="7db13936-f24b-55c4-155e-f656c106b534" testName="DoNotMatchAString" computerName="MARTIN-LAPTOP" duration="00:00:00.0107219" startTime="2011-03-14T14:15:14.2570691+00:00" endTime="2011-03-14T14:15:14.2740700+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12878eec-0860-4983-ac26-0738e5ef3781">
+    </UnitTestResult>
+    <UnitTestResult executionId="77dbaa1f-60c9-4b8f-982c-9eab5cb1fdfb" testId="9e077d99-7ec2-e148-8b6d-478518f7d60a" testName="ConstructTerminal" computerName="MARTIN-LAPTOP" duration="00:00:00.0152624" startTime="2011-03-14T14:15:14.2830706+00:00" endTime="2011-03-14T14:15:14.3040718+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77dbaa1f-60c9-4b8f-982c-9eab5cb1fdfb">
+    </UnitTestResult>
+    <UnitTestResult executionId="9989442e-b531-4744-9fa9-63abbeb19e7a" testId="b913fb65-7c23-6014-39cd-78d4c3556155" testName="ConstructATokenStream" computerName="MARTIN-LAPTOP" duration="00:00:00.0338564" startTime="2011-03-14T14:15:14.3400738+00:00" endTime="2011-03-14T14:15:14.3790760+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9989442e-b531-4744-9fa9-63abbeb19e7a">
+    </UnitTestResult>
+    <UnitTestResult executionId="3fb1af28-70f2-4559-91d6-5e6099621185" testId="c42d1a27-9e17-6c70-addc-282c3e2e07b2" testName="ReadATokenStream" computerName="MARTIN-LAPTOP" duration="00:00:00.0533416" startTime="2011-03-14T14:15:14.4170782+00:00" endTime="2011-03-14T14:15:14.4750815+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fb1af28-70f2-4559-91d6-5e6099621185">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;12&gt;. Actual:&lt;0&gt;. </Message>
+          <StackTrace>   at HermesTests.TokenStreamTest.ReadATokenStream() in C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\HermesTests\TokenStreamTest.cs:line 44
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c02c5b5b-adf9-4f8b-8ee1-4a4e3cb92077" testId="e5138bd5-d1a4-9de0-f29b-b05afabb475e" testName="MatchAString" computerName="MARTIN-LAPTOP" duration="00:00:00.0427690" startTime="2011-03-14T14:15:14.5140838+00:00" endTime="2011-03-14T14:15:14.5660867+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c02c5b5b-adf9-4f8b-8ee1-4a4e3cb92077">
+    </UnitTestResult>
+  </Results>
+</TestRun>
