@@ -1,1 +1,5 @@
 *.suo
+Hermes/bin/*
+HermesTests/bin/*
+Hermes/obj/*
+HermesTests/obj/*
