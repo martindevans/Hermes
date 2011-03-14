@@ -47,7 +47,7 @@ namespace HermesTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(Exception))]
         public void InvalidInputStream()
         {
             var myString = "Hello World!";

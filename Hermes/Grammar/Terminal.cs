@@ -30,11 +30,11 @@ namespace Hermes.Grammar
             this.Name = name;
         }
 
-        public bool Match(string input, out string match)
+        public bool Match(string input, int startIndex, out string match)
         {
-            var m = regex.Match(input);
+            var m = regex.Match(input, startIndex);
 
-            if (!m.Success || m.Index != 0)
+            if (!m.Success || m.Index != startIndex)
             {
                 match = null;
                 return false;
