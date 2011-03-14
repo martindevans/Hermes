@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using Hermes.Grammar;
 using Hermes.Tokenising;
+using System.Text.RegularExpressions;
 
 namespace Hermes
 {
@@ -15,8 +16,9 @@ namespace Hermes
         : IEnumerable<Token>
     {
         #region fields
-        string input;
-        Terminal[] terminals;
+        private static readonly Regex newLineRegex = new Regex(@"\n|\r\n|\f");
+        private string input;
+        private Terminal[] terminals;
         #endregion
 
         #region constructor
@@ -53,6 +55,9 @@ namespace Hermes
         public IEnumerator<Token> GetEnumerator()
         {
             int index = 0;
+            int line = 1;
+            int column = 1;
+
             while (index < input.Length)
             {
                 Token bestToken = null;
@@ -62,16 +67,36 @@ namespace Hermes
                     if (terminal.Match(input, index, out match))
                     {
                         if (bestToken == null || match.Length > bestToken.Value.Length)
-                            bestToken = new Token(terminal, match);
+                            bestToken = new Token(terminal, match, line, column);
                     }
                 }
 
                 if (bestToken == null)
-                    throw new Exception(string.Format("Unrecognised symbol '{0}' at index {1}", input[index], index));
+                    throw new Exception(string.Format("Unrecognised symbol '{0}' at line {1}, column {2}.", input[index], line, column));
 
+                CalculatePosition(index, bestToken.Value.Length, ref line, ref column);
                 index += bestToken.Value.Length;
 
                 yield return bestToken;
+            }
+        }
+
+        private void CalculatePosition(int index, int length, ref int line, ref int column)
+        {
+            var end = index + length;
+
+            column += length;
+
+            while (index < end)
+            {
+                var match = newLineRegex.Match(input, index, end - index);
+                
+                if (!match.Success)
+                    return;
+
+                line++;
+                index = match.Index + match.Length;
+                column = end - index + 1;
             }
         }
 
