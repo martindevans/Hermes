@@ -18,6 +18,15 @@ namespace HermesTests
         }
 
         [TestMethod]
+        public void CastStringIntoTerminal()
+        {
+            string s = "aaa";
+            Terminal t = s;
+
+            Assert.IsNotNull(t);
+        }
+
+        [TestMethod]
         public void MatchAString()
         {
             Terminal t = new Terminal("AAA", "AAA");
@@ -70,34 +79,8 @@ namespace HermesTests
         {
             Terminal a = new Terminal("a");
             Terminal b = new Terminal("b");
-            Rule operatorResult = a + b;
-            Rule methodResult = Terminal.Plus(a, b);
-
-            Assert.IsNotNull(operatorResult);
-            Assert.IsNotNull(methodResult);
-            Assert.AreEqual(operatorResult, methodResult);
-        }
-
-        [TestMethod]
-        public void TerminalPlusStringReturnsRule()
-        {
-            Terminal a = new Terminal("a");
-            string b = "b";
-            Rule operatorResult = a + b;
-            Rule methodResult = Terminal.Plus(a, b);
-
-            Assert.IsNotNull(operatorResult);
-            Assert.IsNotNull(methodResult);
-            Assert.AreEqual(operatorResult, methodResult);
-        }
-
-        [TestMethod]
-        public void StringPlusTerminalReturnsRule()
-        {
-            string a = "a";
-            Terminal b = new Terminal("b");
-            Rule operatorResult = a + b;
-            Rule methodResult = Terminal.Plus(a, b);
+            ConcatenationRule operatorResult = a + b;
+            ConcatenationRule methodResult = Terminal.Plus(a, b);
 
             Assert.IsNotNull(operatorResult);
             Assert.IsNotNull(methodResult);

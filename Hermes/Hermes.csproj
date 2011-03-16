@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Grammar\BnfTerm.cs" />
+    <Compile Include="Grammar\Grammar.cs" />
+    <Compile Include="Grammar\RuleAlternation.cs" />
     <Compile Include="Grammar\Terminal.cs" />
     <Compile Include="Grammar\NonTerminal.cs" />
-    <Compile Include="Grammar\Rule.cs" />
+    <Compile Include="Grammar\ConcatenationRule.cs" />
     <Compile Include="Tokenising\Token.cs" />
-    <Compile Include="Tokenising\TokenStream.cs" />
+    <Compile Include="Tokenising\Lexer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

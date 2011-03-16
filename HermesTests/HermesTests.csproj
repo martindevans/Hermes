@@ -45,10 +45,14 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImplicitCastingTests.cs" />
+    <Compile Include="BnfTermTest.cs" />
+    <Compile Include="ConcatenationRuleTest.cs" />
+    <Compile Include="GrammarTest.cs" />
     <Compile Include="NonTerminalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TerminalTest.cs" />
-    <Compile Include="TokenStreamTest.cs" />
+    <Compile Include="LexerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hermes\Hermes.csproj">

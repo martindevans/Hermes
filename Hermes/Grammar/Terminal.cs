@@ -10,25 +10,34 @@ namespace Hermes.Grammar
     /// 
     /// </summary>
     public class Terminal
+        :BnfTerm
     {
         public readonly Regex regex;
-        public readonly string Name;
+        public bool IsIgnored = false;
 
-        public Terminal(string regex)
-            : this(regex, regex)
+        #region constructors
+        public Terminal(string regex, bool isIgnored=false)
+            : this(regex, regex, isIgnored)
         {
         }
 
-        public Terminal(string name, string regex)
-            :this(name, new Regex(regex))
+        public Terminal(Regex regex, bool isIgnored = false)
+            : this(regex.ToString(), regex, isIgnored)
         {
         }
 
-        public Terminal(string name, Regex regex)
+        public Terminal(string name, string regex, bool isIgnored = false)
+            : this(name, new Regex(regex), isIgnored)
+        {
+        }
+
+        public Terminal(string name, Regex regex, bool isIgnored=false)
+            :base(name)
         {
             this.regex = regex;
-            this.Name = name;
+            this.IsIgnored = isIgnored;
         }
+        #endregion
 
         public bool Match(string input, int startIndex, out string match)
         {
@@ -49,34 +58,18 @@ namespace Hermes.Grammar
             return Name;
         }
 
-        public static Rule Plus(Terminal left, Terminal right)
+        public static implicit operator Terminal(string regex)
         {
-            return null;
+            return new Terminal(regex);
         }
 
-        public static Rule Plus(Terminal left, string right)
+        public override bool Equals(object obj)
         {
-            return null;
-        }
+            Terminal other = obj as Terminal;
+            if (other == null)
+                return false;
 
-        public static Rule Plus(string left, Terminal right)
-        {
-            return null;
-        }
-
-        public static Rule operator +(Terminal left, Terminal right)
-        {
-            return Terminal.Plus(left, right);
-        }
-
-        public static Rule operator +(Terminal left, string right)
-        {
-            return Terminal.Plus(left, right);
-        }
-
-        public static Rule operator +(string left, Terminal right)
-        {
-            return Terminal.Plus(left, right);
+            return regex.Equals(other.regex);
         }
     }
 }

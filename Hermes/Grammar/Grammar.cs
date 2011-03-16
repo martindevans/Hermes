@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hermes.Grammar
 {
-    public class Rule
+    public class Grammar
     {
     }
 }

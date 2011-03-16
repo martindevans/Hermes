@@ -11,7 +11,7 @@ using Hermes.Tokenising;
 namespace HermesTests
 {
     [TestClass]
-    public class TokenStreamTest
+    public class LexerTest
     {
         [TestMethod]
         public void ConstructATokenStream()
@@ -20,7 +20,7 @@ namespace HermesTests
             new StreamWriter(m).WriteLine("Hello World!");
             m.Position = 0;
 
-            TokenStream t = new TokenStream(m, new HashSet<Terminal>());
+            Lexer t = new Lexer(m, new HashSet<Terminal>());
         }
 
         [TestMethod]
@@ -37,7 +37,7 @@ namespace HermesTests
 
             Terminal singleCharacter = new Terminal("Match a single character", ".");
 
-            TokenStream t = new TokenStream(m, singleCharacter);
+            Lexer t = new Lexer(m, singleCharacter);
             Token[] characters = t.ToArray();
 
             Assert.AreEqual(myString.Length, characters.Length);
@@ -47,7 +47,7 @@ namespace HermesTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidDataException))]
         public void InvalidInputStream()
         {
             var myString = "Hello World!";
@@ -61,7 +61,7 @@ namespace HermesTests
 
             Terminal singleCharacter = new Terminal("Match a single A", "A");
 
-            TokenStream t = new TokenStream(m, singleCharacter);
+            Lexer t = new Lexer(m, singleCharacter);
             Token[] characters = t.ToArray();
         }
 
@@ -79,7 +79,7 @@ namespace HermesTests
             var word = new Terminal("Word", "\\S+");
             var whitespace = new Terminal("Whitespace", " |\n|\r");
 
-            var lexer = new TokenStream(m, word, whitespace);
+            var lexer = new Lexer(m, word, whitespace);
             Token[] tokens = lexer.ToArray();
 
             Assert.AreEqual(10, tokens.Length);
@@ -93,6 +93,26 @@ namespace HermesTests
             AssertToken(tokens[7], "Whitespace", 2, 12);
             AssertToken(tokens[8], "Whitespace", 2, 13);
             AssertToken(tokens[9], "Word", 3, 1);
+        }
+
+        [TestMethod]
+        public void IsWhitespaceIgnored()
+        {
+            var input = "Hello World!\nSecond line\r\nFoo";
+
+            MemoryStream m = new MemoryStream();
+            var w = new StreamWriter(m);
+            w.Write(input);
+            w.Flush();
+            m.Position = 0;
+
+            var letter = new Terminal("Letter", "\\S");
+            var whitespace = new Terminal("Whitespace", " |\n|\r", true);
+
+            var lexer = new Lexer(m, letter, whitespace);
+
+            foreach (var match in lexer)
+                Assert.IsFalse(match.Terminal.IsIgnored);
         }
 
         private void AssertToken(Token token, string name, int line, int column)
