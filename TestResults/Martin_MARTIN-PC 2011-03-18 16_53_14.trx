@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="27977462-1e7a-41f1-ae45-7061743eb9d6" name="Martin@MARTIN-PC 2011-03-18 16:53:14" runUser="Martin-PC\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-PC 2011-03-18 16_53_14">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-18T16:53:14.9886306+00:00" queuing="2011-03-18T16:53:15.0916365+00:00" start="2011-03-18T16:53:15.1106376+00:00" finish="2011-03-18T16:53:15.5866648+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="46" executed="46" passed="46" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ConcatenateConcatenationRuleWithTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="32dd8ca4-83b8-6d80-4c5c-4828d280f87f">
+      <Execution id="fdde5fd3-94ae-4ed1-bb2d-209aeda7c746" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRuleWithTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenateConcatenationRules" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="24e0991d-26b5-2600-7eed-ff0f18d23e66">
+      <Execution id="55b6c854-574b-4394-af59-bd0b96f5c1e7" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationRuleTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRules" />
+    </UnitTest>
+    <UnitTest name="MatchAString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="e5138bd5-d1a4-9de0-f29b-b05afabb475e">
+      <Execution id="17d180ef-84c4-4d0b-9a35-46906e160eb1" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MatchAString" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfUntypedTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="89f8a49a-069f-56ae-654e-3718306f122c">
+      <Execution id="0261b4e9-6522-4cfa-a74c-445ce30db6ac" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfUntypedTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfStringAndNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="d4ab72ca-3b2a-cffc-53ca-f1e3327b3ebe">
+      <Execution id="eb7ba7e1-bf6c-43f9-8afe-abbd525ca772" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfStringAndNonTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTerminalAndNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="242902ef-27ad-71da-4ce4-82e91c0b5d00">
+      <Execution id="e4a67407-033e-4e52-a275-3e649c66eb00" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTerminalAndNonTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfStringAndTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="7f24a203-e1ab-7aaf-7e0e-53e514a18c3b">
+      <Execution id="19bda753-ccff-456c-b869-77fa53a24cb1" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfStringAndTerminal" />
+    </UnitTest>
+    <UnitTest name="CastStringIntoTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="e176d6c3-6654-6f09-56fc-75d4b91d30b1">
+      <Execution id="7a79ef3d-74cc-4212-9795-23c8e562a1f8" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CastStringIntoTerminal" />
+    </UnitTest>
+    <UnitTest name="AlternateTerms" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="12aba116-2692-86bc-24a4-5d1796d42773">
+      <Execution id="ca6444b8-f3ae-47cf-966c-e7bdc9fd472a" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.BnfTermTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AlternateTerms" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTerminalAndString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="71886231-80f6-4830-8e72-dd944911a099">
+      <Execution id="01accb0f-21e8-4e76-ac06-c852be4bf8f8" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTerminalAndString" />
+    </UnitTest>
+    <UnitTest name="ConstructTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="9e077d99-7ec2-e148-8b6d-478518f7d60a">
+      <Execution id="e8dc147f-3e61-4d3c-b586-6a215f3e1939" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructTerminal" />
+    </UnitTest>
+    <UnitTest name="ConstructANonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="68b42349-bc9a-b261-ad5c-92f6798ba498">
+      <Execution id="1bae3796-197c-4200-a9e8-08691f33f517" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.NonTerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructANonTerminal" />
+    </UnitTest>
+    <UnitTest name="MatchAStringNotAtIndexZeroButWithOffset" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="a1297c0c-fa57-105a-7c73-46300d05a0d0">
+      <Execution id="7cc4a512-1478-401e-a932-225adbc9b754" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MatchAStringNotAtIndexZeroButWithOffset" />
+    </UnitTest>
+    <UnitTest name="DoNotMatchAStringNotAtIndexZero" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="309abaef-5e7a-21da-1899-85ef214de9da">
+      <Execution id="a2106415-44d0-4df8-9f4a-74ad63c174a3" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoNotMatchAStringNotAtIndexZero" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTerminalAndNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="c48bba04-4fb9-7c8f-6c80-2581029b8a7f">
+      <Execution id="a8e89e28-958a-43ed-8c55-28bf846d08c6" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTerminalAndNonTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenateConcatenationRuleWithNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="950c58d1-9e16-eddb-2559-4fab05f29733">
+      <Execution id="5fdd344f-5d1f-4409-9d7b-2c5d856a80eb" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRuleWithNonTerminal" />
+    </UnitTest>
+    <UnitTest name="TerminalPlusTerminalReturnsRule" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="e34f2a75-40af-449c-71f1-2093efbfcfe8">
+      <Execution id="ab420083-90de-4b9a-9a51-88f1fcf828cb" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TerminalPlusTerminalReturnsRule" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTypedTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="ec3aedc7-42bf-e2d5-e241-a02f33d1a39e">
+      <Execution id="dca34107-4c35-4f6a-ba06-558b6f0fa06b" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTypedTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenateConcatenationRuleWithString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="fcaf3cb3-b4cd-6a40-9262-02a569e1b51d">
+      <Execution id="353a2aaf-00ec-4147-9e8c-6193a4c10e52" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRuleWithString" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTypedNonTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="50127f22-518b-ba73-ea89-59601e3dd905">
+      <Execution id="0714f652-0c42-4b59-aef0-6a96e79e8ae9" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTypedNonTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenateConcatenationRuleWithNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="a447929c-b3b6-a35b-61b8-c33fd8ec03a0">
+      <Execution id="24671ca2-6c51-4ce0-9773-56ab22edae66" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRuleWithNonTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfNonTerminalAndTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="a6e4368c-8e16-de9c-d31b-bf8e998cdbac">
+      <Execution id="321c65dc-6d23-4425-9bc7-68c9d7c71bb5" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfNonTerminalAndTerminal" />
+    </UnitTest>
+    <UnitTest name="ConstructATokenStream" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="604de895-cb53-a9e0-b794-44296dcd3835">
+      <Execution id="1862194f-def1-403a-8bec-0764228857b8" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.LexerTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructATokenStream" />
+    </UnitTest>
+    <UnitTest name="CastStringIntoTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="972f115f-5f71-e6f9-0a7a-7c57f892875b">
+      <Execution id="ed65b819-a2dc-4cac-9ed3-9803537b3e48" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.BnfTermTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CastStringIntoTerminal" />
+    </UnitTest>
+    <UnitTest name="ConstructRecursiveDescentParser" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="ec17d828-5496-163d-69a5-8bce54583178">
+      <Execution id="ed245e0d-e2e4-4f8b-ae13-c557a38f810a" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.RecursiveDescentTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructRecursiveDescentParser" />
+    </UnitTest>
+    <UnitTest name="IsWhitespaceIgnored" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="cff5d6f1-163c-7c0b-70eb-1117e4f6f42f">
+      <Execution id="cbc5d172-afa0-4d96-95c7-5defe7e646a0" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.LexerTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsWhitespaceIgnored" />
+    </UnitTest>
+    <UnitTest name="CorrectLineAndColumnNumbers" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="429f48cc-2b8b-db75-38c8-dfe106f4e216">
+      <Execution id="90915d08-d4b5-47cd-a32c-4b8807b9b6b8" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.LexerTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CorrectLineAndColumnNumbers" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfNonTerminalAndString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="f223f713-4e8b-de5f-a42c-1fb64190de91">
+      <Execution id="a1df0607-db41-416b-b7af-6db8c533cb6f" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfNonTerminalAndString" />
+    </UnitTest>
+    <UnitTest name="ConcatenateConcatenationRuleWithString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="eefb3d44-e0d5-00f5-893d-dc0765ca8824">
+      <Execution id="4c317f39-9380-4c7b-808f-d428b1b20d08" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRuleWithString" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfNonTerminalAndString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="2e0f75cc-05ae-6cc1-a3de-727b3fe34122">
+      <Execution id="38f6fd8a-d4e0-4da6-92ad-86f4a17c772c" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfNonTerminalAndString" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfStringAndTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="82518f97-f216-4a8d-ed0f-a9963b85d416">
+      <Execution id="403004d8-4de4-4d0e-8732-beda83f21107" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfStringAndTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenateTerms" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="63236655-d474-e0a2-4106-219859e6c5c2">
+      <Execution id="435e0197-6923-448f-86d4-54172ba1a039" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.BnfTermTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateTerms" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTypedNonTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="b9053de6-96b9-1509-acd4-a96ca1347b3d">
+      <Execution id="23da5160-ca84-4f03-9466-34319bb0c097" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTypedNonTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenateConcatenationRuleWithTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="9ee61ac8-b0c0-944e-4dbe-97d4e6feb90b">
+      <Execution id="1b643b64-4884-4ac3-a35b-24f44d849206" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenateConcatenationRuleWithTerminal" />
+    </UnitTest>
+    <UnitTest name="CastBnfTermIntoConcatenationRule" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="a9789f0a-4478-1a62-828d-2cd78252d19e">
+      <Execution id="b72f9925-ed3b-437b-a83f-5089b8288b39" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.BnfTermTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CastBnfTermIntoConcatenationRule" />
+    </UnitTest>
+    <UnitTest name="DoNotMatchAString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="7db13936-f24b-55c4-155e-f656c106b534">
+      <Execution id="085c1d28-c68f-474f-bc7c-0aeb91ddf09e" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.TerminalTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoNotMatchAString" />
+    </UnitTest>
+    <UnitTest name="ReadATokenStream" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="a68b0502-c526-299b-5956-cec5b457ae4d">
+      <Execution id="ae3facaf-3806-4b54-810b-d64d94e627f8" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.LexerTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadATokenStream" />
+    </UnitTest>
+    <UnitTest name="ConstructAGrammar" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="36242104-b74e-fbcf-0eba-0e47460d90d7">
+      <Execution id="8c916f57-6f4a-4893-8430-191a289f9245" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.GrammarTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructAGrammar" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfUntypedTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="9eb5f561-003d-1c75-055b-21bdfe54fcd0">
+      <Execution id="eeea2934-c7ea-4ec8-a911-6ffcc4e54bf4" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfUntypedTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfNonTerminalAndTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="f2d2b3b1-c00a-637e-7dd6-e1f78615cce8">
+      <Execution id="984ba635-435f-4fff-99b9-7de9741bf800" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfNonTerminalAndTerminal" />
+    </UnitTest>
+    <UnitTest name="CastStringIntoConcatenationRule" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="f361bf6f-6274-717c-addf-54d14527e4bc">
+      <Execution id="26afdbd8-5c61-4e34-9abc-9ce63c6c8031" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationRuleTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CastStringIntoConcatenationRule" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTerminalAndString" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="5d695d69-c75e-cd20-56bf-478c02bd221a">
+      <Execution id="8c94593f-4a3c-425e-aebe-11e255fbb6bb" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTerminalAndString" />
+    </UnitTest>
+    <UnitTest name="InvalidInputStream" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="0b6ac8c9-7ccf-1556-faae-cbf2ffc949bf">
+      <Execution id="5e311f5f-7ca1-46c1-b638-6d331857f2ab" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.LexerTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InvalidInputStream" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfStringAndNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="44e9377b-e25e-89e7-5186-1269acd482e1">
+      <Execution id="af0c5f16-8ff5-4e77-a096-bc76b74f16f2" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfStringAndNonTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTypedTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="09f8922b-8f1c-c312-fb3c-480f333a83b5">
+      <Execution id="d8155049-f91c-42fb-8d7c-f05e61e8bdbc" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.AlternationTesting+ConcatenationTesting, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTypedTerminals" />
+    </UnitTest>
+    <UnitTest name="CastConcatenationRuleIntoAlternationRule" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="eaa7e3d9-5735-99be-cbc6-9447adcf9f24">
+      <Execution id="e0b74ca6-1911-40c0-ac8f-571a78ab7802" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationRuleTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CastConcatenationRuleIntoAlternationRule" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="09f8922b-8f1c-c312-fb3c-480f333a83b5" executionId="d8155049-f91c-42fb-8d7c-f05e61e8bdbc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b6ac8c9-7ccf-1556-faae-cbf2ffc949bf" executionId="5e311f5f-7ca1-46c1-b638-6d331857f2ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12aba116-2692-86bc-24a4-5d1796d42773" executionId="ca6444b8-f3ae-47cf-966c-e7bdc9fd472a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="242902ef-27ad-71da-4ce4-82e91c0b5d00" executionId="e4a67407-033e-4e52-a275-3e649c66eb00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24e0991d-26b5-2600-7eed-ff0f18d23e66" executionId="55b6c854-574b-4394-af59-bd0b96f5c1e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e0f75cc-05ae-6cc1-a3de-727b3fe34122" executionId="38f6fd8a-d4e0-4da6-92ad-86f4a17c772c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="309abaef-5e7a-21da-1899-85ef214de9da" executionId="a2106415-44d0-4df8-9f4a-74ad63c174a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32dd8ca4-83b8-6d80-4c5c-4828d280f87f" executionId="fdde5fd3-94ae-4ed1-bb2d-209aeda7c746" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36242104-b74e-fbcf-0eba-0e47460d90d7" executionId="8c916f57-6f4a-4893-8430-191a289f9245" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="429f48cc-2b8b-db75-38c8-dfe106f4e216" executionId="90915d08-d4b5-47cd-a32c-4b8807b9b6b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="44e9377b-e25e-89e7-5186-1269acd482e1" executionId="af0c5f16-8ff5-4e77-a096-bc76b74f16f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50127f22-518b-ba73-ea89-59601e3dd905" executionId="0714f652-0c42-4b59-aef0-6a96e79e8ae9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d695d69-c75e-cd20-56bf-478c02bd221a" executionId="8c94593f-4a3c-425e-aebe-11e255fbb6bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="604de895-cb53-a9e0-b794-44296dcd3835" executionId="1862194f-def1-403a-8bec-0764228857b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63236655-d474-e0a2-4106-219859e6c5c2" executionId="435e0197-6923-448f-86d4-54172ba1a039" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68b42349-bc9a-b261-ad5c-92f6798ba498" executionId="1bae3796-197c-4200-a9e8-08691f33f517" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71886231-80f6-4830-8e72-dd944911a099" executionId="01accb0f-21e8-4e76-ac06-c852be4bf8f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7db13936-f24b-55c4-155e-f656c106b534" executionId="085c1d28-c68f-474f-bc7c-0aeb91ddf09e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f24a203-e1ab-7aaf-7e0e-53e514a18c3b" executionId="19bda753-ccff-456c-b869-77fa53a24cb1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82518f97-f216-4a8d-ed0f-a9963b85d416" executionId="403004d8-4de4-4d0e-8732-beda83f21107" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89f8a49a-069f-56ae-654e-3718306f122c" executionId="0261b4e9-6522-4cfa-a74c-445ce30db6ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="950c58d1-9e16-eddb-2559-4fab05f29733" executionId="5fdd344f-5d1f-4409-9d7b-2c5d856a80eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="972f115f-5f71-e6f9-0a7a-7c57f892875b" executionId="ed65b819-a2dc-4cac-9ed3-9803537b3e48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e077d99-7ec2-e148-8b6d-478518f7d60a" executionId="e8dc147f-3e61-4d3c-b586-6a215f3e1939" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9eb5f561-003d-1c75-055b-21bdfe54fcd0" executionId="eeea2934-c7ea-4ec8-a911-6ffcc4e54bf4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ee61ac8-b0c0-944e-4dbe-97d4e6feb90b" executionId="1b643b64-4884-4ac3-a35b-24f44d849206" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1297c0c-fa57-105a-7c73-46300d05a0d0" executionId="7cc4a512-1478-401e-a932-225adbc9b754" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a447929c-b3b6-a35b-61b8-c33fd8ec03a0" executionId="24671ca2-6c51-4ce0-9773-56ab22edae66" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a68b0502-c526-299b-5956-cec5b457ae4d" executionId="ae3facaf-3806-4b54-810b-d64d94e627f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6e4368c-8e16-de9c-d31b-bf8e998cdbac" executionId="321c65dc-6d23-4425-9bc7-68c9d7c71bb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9789f0a-4478-1a62-828d-2cd78252d19e" executionId="b72f9925-ed3b-437b-a83f-5089b8288b39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9053de6-96b9-1509-acd4-a96ca1347b3d" executionId="23da5160-ca84-4f03-9466-34319bb0c097" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c48bba04-4fb9-7c8f-6c80-2581029b8a7f" executionId="a8e89e28-958a-43ed-8c55-28bf846d08c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cff5d6f1-163c-7c0b-70eb-1117e4f6f42f" executionId="cbc5d172-afa0-4d96-95c7-5defe7e646a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4ab72ca-3b2a-cffc-53ca-f1e3327b3ebe" executionId="eb7ba7e1-bf6c-43f9-8afe-abbd525ca772" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e176d6c3-6654-6f09-56fc-75d4b91d30b1" executionId="7a79ef3d-74cc-4212-9795-23c8e562a1f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e34f2a75-40af-449c-71f1-2093efbfcfe8" executionId="ab420083-90de-4b9a-9a51-88f1fcf828cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5138bd5-d1a4-9de0-f29b-b05afabb475e" executionId="17d180ef-84c4-4d0b-9a35-46906e160eb1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eaa7e3d9-5735-99be-cbc6-9447adcf9f24" executionId="e0b74ca6-1911-40c0-ac8f-571a78ab7802" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec17d828-5496-163d-69a5-8bce54583178" executionId="ed245e0d-e2e4-4f8b-ae13-c557a38f810a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec3aedc7-42bf-e2d5-e241-a02f33d1a39e" executionId="dca34107-4c35-4f6a-ba06-558b6f0fa06b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eefb3d44-e0d5-00f5-893d-dc0765ca8824" executionId="4c317f39-9380-4c7b-808f-d428b1b20d08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f223f713-4e8b-de5f-a42c-1fb64190de91" executionId="a1df0607-db41-416b-b7af-6db8c533cb6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f2d2b3b1-c00a-637e-7dd6-e1f78615cce8" executionId="984ba635-435f-4fff-99b9-7de9741bf800" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f361bf6f-6274-717c-addf-54d14527e4bc" executionId="26afdbd8-5c61-4e34-9abc-9ce63c6c8031" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fcaf3cb3-b4cd-6a40-9262-02a569e1b51d" executionId="353a2aaf-00ec-4147-9e8c-6193a4c10e52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d8155049-f91c-42fb-8d7c-f05e61e8bdbc" testId="09f8922b-8f1c-c312-fb3c-480f333a83b5" testName="ConcatenationOfTypedTerminals" computerName="MARTIN-PC" duration="00:00:00.0117527" startTime="2011-03-18T16:53:15.1126377+00:00" endTime="2011-03-18T16:53:15.3006485+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8155049-f91c-42fb-8d7c-f05e61e8bdbc">
+    </UnitTestResult>
+    <UnitTestResult executionId="5e311f5f-7ca1-46c1-b638-6d331857f2ab" testId="0b6ac8c9-7ccf-1556-faae-cbf2ffc949bf" testName="InvalidInputStream" computerName="MARTIN-PC" duration="00:00:00.0045715" startTime="2011-03-18T16:53:15.3026486+00:00" endTime="2011-03-18T16:53:15.3166494+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e311f5f-7ca1-46c1-b638-6d331857f2ab">
+    </UnitTestResult>
+    <UnitTestResult executionId="ca6444b8-f3ae-47cf-966c-e7bdc9fd472a" testId="12aba116-2692-86bc-24a4-5d1796d42773" testName="AlternateTerms" computerName="MARTIN-PC" duration="00:00:00.0002373" startTime="2011-03-18T16:53:15.3206496+00:00" endTime="2011-03-18T16:53:15.3246498+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca6444b8-f3ae-47cf-966c-e7bdc9fd472a">
+    </UnitTestResult>
+    <UnitTestResult executionId="e4a67407-033e-4e52-a275-3e649c66eb00" testId="242902ef-27ad-71da-4ce4-82e91c0b5d00" testName="ConcatenationOfTerminalAndNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0005269" startTime="2011-03-18T16:53:15.3286501+00:00" endTime="2011-03-18T16:53:15.3316502+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4a67407-033e-4e52-a275-3e649c66eb00">
+    </UnitTestResult>
+    <UnitTestResult executionId="55b6c854-574b-4394-af59-bd0b96f5c1e7" testId="24e0991d-26b5-2600-7eed-ff0f18d23e66" testName="ConcatenateConcatenationRules" computerName="MARTIN-PC" duration="00:00:00.0009299" startTime="2011-03-18T16:53:15.3356505+00:00" endTime="2011-03-18T16:53:15.3416508+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55b6c854-574b-4394-af59-bd0b96f5c1e7">
+    </UnitTestResult>
+    <UnitTestResult executionId="38f6fd8a-d4e0-4da6-92ad-86f4a17c772c" testId="2e0f75cc-05ae-6cc1-a3de-727b3fe34122" testName="ConcatenationOfNonTerminalAndString" computerName="MARTIN-PC" duration="00:00:00.0005053" startTime="2011-03-18T16:53:15.3446510+00:00" endTime="2011-03-18T16:53:15.3476512+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38f6fd8a-d4e0-4da6-92ad-86f4a17c772c">
+    </UnitTestResult>
+    <UnitTestResult executionId="a2106415-44d0-4df8-9f4a-74ad63c174a3" testId="309abaef-5e7a-21da-1899-85ef214de9da" testName="DoNotMatchAStringNotAtIndexZero" computerName="MARTIN-PC" duration="00:00:00.0006966" startTime="2011-03-18T16:53:15.3536515+00:00" endTime="2011-03-18T16:53:15.3576517+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2106415-44d0-4df8-9f4a-74ad63c174a3">
+    </UnitTestResult>
+    <UnitTestResult executionId="fdde5fd3-94ae-4ed1-bb2d-209aeda7c746" testId="32dd8ca4-83b8-6d80-4c5c-4828d280f87f" testName="ConcatenateConcatenationRuleWithTerminal" computerName="MARTIN-PC" duration="00:00:00.0021502" startTime="2011-03-18T16:53:15.3636521+00:00" endTime="2011-03-18T16:53:15.3736526+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdde5fd3-94ae-4ed1-bb2d-209aeda7c746">
+    </UnitTestResult>
+    <UnitTestResult executionId="8c916f57-6f4a-4893-8430-191a289f9245" testId="36242104-b74e-fbcf-0eba-0e47460d90d7" testName="ConstructAGrammar" computerName="MARTIN-PC" duration="00:00:00.0031263" startTime="2011-03-18T16:53:15.3766528+00:00" endTime="2011-03-18T16:53:15.3836532+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c916f57-6f4a-4893-8430-191a289f9245">
+    </UnitTestResult>
+    <UnitTestResult executionId="90915d08-d4b5-47cd-a32c-4b8807b9b6b8" testId="429f48cc-2b8b-db75-38c8-dfe106f4e216" testName="CorrectLineAndColumnNumbers" computerName="MARTIN-PC" duration="00:00:00.0006780" startTime="2011-03-18T16:53:15.3856533+00:00" endTime="2011-03-18T16:53:15.3906536+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90915d08-d4b5-47cd-a32c-4b8807b9b6b8">
+    </UnitTestResult>
+    <UnitTestResult executionId="af0c5f16-8ff5-4e77-a096-bc76b74f16f2" testId="44e9377b-e25e-89e7-5186-1269acd482e1" testName="ConcatenationOfStringAndNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0001996" startTime="2011-03-18T16:53:15.3916537+00:00" endTime="2011-03-18T16:53:15.3956539+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af0c5f16-8ff5-4e77-a096-bc76b74f16f2">
+    </UnitTestResult>
+    <UnitTestResult executionId="0714f652-0c42-4b59-aef0-6a96e79e8ae9" testId="50127f22-518b-ba73-ea89-59601e3dd905" testName="ConcatenationOfTypedNonTerminals" computerName="MARTIN-PC" duration="00:00:00.0002080" startTime="2011-03-18T16:53:15.3966540+00:00" endTime="2011-03-18T16:53:15.4006542+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0714f652-0c42-4b59-aef0-6a96e79e8ae9">
+    </UnitTestResult>
+    <UnitTestResult executionId="8c94593f-4a3c-425e-aebe-11e255fbb6bb" testId="5d695d69-c75e-cd20-56bf-478c02bd221a" testName="ConcatenationOfTerminalAndString" computerName="MARTIN-PC" duration="00:00:00.0002431" startTime="2011-03-18T16:53:15.4016542+00:00" endTime="2011-03-18T16:53:15.4056545+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c94593f-4a3c-425e-aebe-11e255fbb6bb">
+    </UnitTestResult>
+    <UnitTestResult executionId="1862194f-def1-403a-8bec-0764228857b8" testId="604de895-cb53-a9e0-b794-44296dcd3835" testName="ConstructATokenStream" computerName="MARTIN-PC" duration="00:00:00.0002201" startTime="2011-03-18T16:53:15.4076546+00:00" endTime="2011-03-18T16:53:15.4116548+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1862194f-def1-403a-8bec-0764228857b8">
+    </UnitTestResult>
+    <UnitTestResult executionId="435e0197-6923-448f-86d4-54172ba1a039" testId="63236655-d474-e0a2-4106-219859e6c5c2" testName="ConcatenateTerms" computerName="MARTIN-PC" duration="00:00:00.0001601" startTime="2011-03-18T16:53:15.4126549+00:00" endTime="2011-03-18T16:53:15.4166551+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="435e0197-6923-448f-86d4-54172ba1a039">
+    </UnitTestResult>
+    <UnitTestResult executionId="1bae3796-197c-4200-a9e8-08691f33f517" testId="68b42349-bc9a-b261-ad5c-92f6798ba498" testName="ConstructANonTerminal" computerName="MARTIN-PC" duration="00:00:00.0002808" startTime="2011-03-18T16:53:15.4186552+00:00" endTime="2011-03-18T16:53:15.4226554+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1bae3796-197c-4200-a9e8-08691f33f517">
+    </UnitTestResult>
+    <UnitTestResult executionId="01accb0f-21e8-4e76-ac06-c852be4bf8f8" testId="71886231-80f6-4830-8e72-dd944911a099" testName="ConcatenationOfTerminalAndString" computerName="MARTIN-PC" duration="00:00:00.0002172" startTime="2011-03-18T16:53:15.4246556+00:00" endTime="2011-03-18T16:53:15.4286558+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01accb0f-21e8-4e76-ac06-c852be4bf8f8">
+    </UnitTestResult>
+    <UnitTestResult executionId="085c1d28-c68f-474f-bc7c-0aeb91ddf09e" testId="7db13936-f24b-55c4-155e-f656c106b534" testName="DoNotMatchAString" computerName="MARTIN-PC" duration="00:00:00.0001481" startTime="2011-03-18T16:53:15.4296558+00:00" endTime="2011-03-18T16:53:15.4336561+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="085c1d28-c68f-474f-bc7c-0aeb91ddf09e">
+    </UnitTestResult>
+    <UnitTestResult executionId="19bda753-ccff-456c-b869-77fa53a24cb1" testId="7f24a203-e1ab-7aaf-7e0e-53e514a18c3b" testName="ConcatenationOfStringAndTerminal" computerName="MARTIN-PC" duration="00:00:00.0002139" startTime="2011-03-18T16:53:15.4346561+00:00" endTime="2011-03-18T16:53:15.4376563+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19bda753-ccff-456c-b869-77fa53a24cb1">
+    </UnitTestResult>
+    <UnitTestResult executionId="403004d8-4de4-4d0e-8732-beda83f21107" testId="82518f97-f216-4a8d-ed0f-a9963b85d416" testName="ConcatenationOfStringAndTerminal" computerName="MARTIN-PC" duration="00:00:00.0002263" startTime="2011-03-18T16:53:15.4386564+00:00" endTime="2011-03-18T16:53:15.4426566+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="403004d8-4de4-4d0e-8732-beda83f21107">
+    </UnitTestResult>
+    <UnitTestResult executionId="0261b4e9-6522-4cfa-a74c-445ce30db6ac" testId="89f8a49a-069f-56ae-654e-3718306f122c" testName="ConcatenationOfUntypedTerminals" computerName="MARTIN-PC" duration="00:00:00.0001780" startTime="2011-03-18T16:53:15.4436566+00:00" endTime="2011-03-18T16:53:15.4476569+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0261b4e9-6522-4cfa-a74c-445ce30db6ac">
+    </UnitTestResult>
+    <UnitTestResult executionId="5fdd344f-5d1f-4409-9d7b-2c5d856a80eb" testId="950c58d1-9e16-eddb-2559-4fab05f29733" testName="ConcatenateConcatenationRuleWithNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0005522" startTime="2011-03-18T16:53:15.4486569+00:00" endTime="2011-03-18T16:53:15.4526572+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5fdd344f-5d1f-4409-9d7b-2c5d856a80eb">
+    </UnitTestResult>
+    <UnitTestResult executionId="ed65b819-a2dc-4cac-9ed3-9803537b3e48" testId="972f115f-5f71-e6f9-0a7a-7c57f892875b" testName="CastStringIntoTerminal" computerName="MARTIN-PC" duration="00:00:00.0001433" startTime="2011-03-18T16:53:15.4536572+00:00" endTime="2011-03-18T16:53:15.4566574+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed65b819-a2dc-4cac-9ed3-9803537b3e48">
+    </UnitTestResult>
+    <UnitTestResult executionId="e8dc147f-3e61-4d3c-b586-6a215f3e1939" testId="9e077d99-7ec2-e148-8b6d-478518f7d60a" testName="ConstructTerminal" computerName="MARTIN-PC" duration="00:00:00.0001338" startTime="2011-03-18T16:53:15.4586575+00:00" endTime="2011-03-18T16:53:15.4616577+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8dc147f-3e61-4d3c-b586-6a215f3e1939">
+    </UnitTestResult>
+    <UnitTestResult executionId="eeea2934-c7ea-4ec8-a911-6ffcc4e54bf4" testId="9eb5f561-003d-1c75-055b-21bdfe54fcd0" testName="ConcatenationOfUntypedTerminals" computerName="MARTIN-PC" duration="00:00:00.0002808" startTime="2011-03-18T16:53:15.4646578+00:00" endTime="2011-03-18T16:53:15.4676580+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eeea2934-c7ea-4ec8-a911-6ffcc4e54bf4">
+    </UnitTestResult>
+    <UnitTestResult executionId="1b643b64-4884-4ac3-a35b-24f44d849206" testId="9ee61ac8-b0c0-944e-4dbe-97d4e6feb90b" testName="ConcatenateConcatenationRuleWithTerminal" computerName="MARTIN-PC" duration="00:00:00.0002142" startTime="2011-03-18T16:53:15.4696581+00:00" endTime="2011-03-18T16:53:15.4736584+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b643b64-4884-4ac3-a35b-24f44d849206">
+    </UnitTestResult>
+    <UnitTestResult executionId="7cc4a512-1478-401e-a932-225adbc9b754" testId="a1297c0c-fa57-105a-7c73-46300d05a0d0" testName="MatchAStringNotAtIndexZeroButWithOffset" computerName="MARTIN-PC" duration="00:00:00.0001777" startTime="2011-03-18T16:53:15.4736584+00:00" endTime="2011-03-18T16:53:15.4776586+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7cc4a512-1478-401e-a932-225adbc9b754">
+    </UnitTestResult>
+    <UnitTestResult executionId="24671ca2-6c51-4ce0-9773-56ab22edae66" testId="a447929c-b3b6-a35b-61b8-c33fd8ec03a0" testName="ConcatenateConcatenationRuleWithNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0002132" startTime="2011-03-18T16:53:15.4796587+00:00" endTime="2011-03-18T16:53:15.4826589+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24671ca2-6c51-4ce0-9773-56ab22edae66">
+    </UnitTestResult>
+    <UnitTestResult executionId="ae3facaf-3806-4b54-810b-d64d94e627f8" testId="a68b0502-c526-299b-5956-cec5b457ae4d" testName="ReadATokenStream" computerName="MARTIN-PC" duration="00:00:00.0004340" startTime="2011-03-18T16:53:15.4836589+00:00" endTime="2011-03-18T16:53:15.4866591+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae3facaf-3806-4b54-810b-d64d94e627f8">
+    </UnitTestResult>
+    <UnitTestResult executionId="321c65dc-6d23-4425-9bc7-68c9d7c71bb5" testId="a6e4368c-8e16-de9c-d31b-bf8e998cdbac" testName="ConcatenationOfNonTerminalAndTerminal" computerName="MARTIN-PC" duration="00:00:00.0002102" startTime="2011-03-18T16:53:15.4876592+00:00" endTime="2011-03-18T16:53:15.4916594+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="321c65dc-6d23-4425-9bc7-68c9d7c71bb5">
+    </UnitTestResult>
+    <UnitTestResult executionId="b72f9925-ed3b-437b-a83f-5089b8288b39" testId="a9789f0a-4478-1a62-828d-2cd78252d19e" testName="CastBnfTermIntoConcatenationRule" computerName="MARTIN-PC" duration="00:00:00.0001367" startTime="2011-03-18T16:53:15.4916594+00:00" endTime="2011-03-18T16:53:15.4956596+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b72f9925-ed3b-437b-a83f-5089b8288b39">
+    </UnitTestResult>
+    <UnitTestResult executionId="23da5160-ca84-4f03-9466-34319bb0c097" testId="b9053de6-96b9-1509-acd4-a96ca1347b3d" testName="ConcatenationOfTypedNonTerminals" computerName="MARTIN-PC" duration="00:00:00.0002011" startTime="2011-03-18T16:53:15.4966597+00:00" endTime="2011-03-18T16:53:15.4996598+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23da5160-ca84-4f03-9466-34319bb0c097">
+    </UnitTestResult>
+    <UnitTestResult executionId="a8e89e28-958a-43ed-8c55-28bf846d08c6" testId="c48bba04-4fb9-7c8f-6c80-2581029b8a7f" testName="ConcatenationOfTerminalAndNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0002091" startTime="2011-03-18T16:53:15.5006599+00:00" endTime="2011-03-18T16:53:15.5056602+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8e89e28-958a-43ed-8c55-28bf846d08c6">
+    </UnitTestResult>
+    <UnitTestResult executionId="cbc5d172-afa0-4d96-95c7-5defe7e646a0" testId="cff5d6f1-163c-7c0b-70eb-1117e4f6f42f" testName="IsWhitespaceIgnored" computerName="MARTIN-PC" duration="00:00:00.0005496" startTime="2011-03-18T16:53:15.5066603+00:00" endTime="2011-03-18T16:53:15.5096604+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbc5d172-afa0-4d96-95c7-5defe7e646a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="eb7ba7e1-bf6c-43f9-8afe-abbd525ca772" testId="d4ab72ca-3b2a-cffc-53ca-f1e3327b3ebe" testName="ConcatenationOfStringAndNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0002033" startTime="2011-03-18T16:53:15.5106605+00:00" endTime="2011-03-18T16:53:15.5136607+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb7ba7e1-bf6c-43f9-8afe-abbd525ca772">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a79ef3d-74cc-4212-9795-23c8e562a1f8" testId="e176d6c3-6654-6f09-56fc-75d4b91d30b1" testName="CastStringIntoTerminal" computerName="MARTIN-PC" duration="00:00:00.0001199" startTime="2011-03-18T16:53:15.5146607+00:00" endTime="2011-03-18T16:53:15.5186609+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a79ef3d-74cc-4212-9795-23c8e562a1f8">
+    </UnitTestResult>
+    <UnitTestResult executionId="ab420083-90de-4b9a-9a51-88f1fcf828cb" testId="e34f2a75-40af-449c-71f1-2093efbfcfe8" testName="TerminalPlusTerminalReturnsRule" computerName="MARTIN-PC" duration="00:00:00.0005496" startTime="2011-03-18T16:53:15.5196610+00:00" endTime="2011-03-18T16:53:15.5256613+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab420083-90de-4b9a-9a51-88f1fcf828cb">
+    </UnitTestResult>
+    <UnitTestResult executionId="17d180ef-84c4-4d0b-9a35-46906e160eb1" testId="e5138bd5-d1a4-9de0-f29b-b05afabb475e" testName="MatchAString" computerName="MARTIN-PC" duration="00:00:00.0002311" startTime="2011-03-18T16:53:15.5266614+00:00" endTime="2011-03-18T16:53:15.5306616+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17d180ef-84c4-4d0b-9a35-46906e160eb1">
+    </UnitTestResult>
+    <UnitTestResult executionId="e0b74ca6-1911-40c0-ac8f-571a78ab7802" testId="eaa7e3d9-5735-99be-cbc6-9447adcf9f24" testName="CastConcatenationRuleIntoAlternationRule" computerName="MARTIN-PC" duration="00:00:00.0001411" startTime="2011-03-18T16:53:15.5316617+00:00" endTime="2011-03-18T16:53:15.5346619+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0b74ca6-1911-40c0-ac8f-571a78ab7802">
+    </UnitTestResult>
+    <UnitTestResult executionId="ed245e0d-e2e4-4f8b-ae13-c557a38f810a" testId="ec17d828-5496-163d-69a5-8bce54583178" testName="ConstructRecursiveDescentParser" computerName="MARTIN-PC" duration="00:00:00.0005423" startTime="2011-03-18T16:53:15.5356619+00:00" endTime="2011-03-18T16:53:15.5466625+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed245e0d-e2e4-4f8b-ae13-c557a38f810a">
+    </UnitTestResult>
+    <UnitTestResult executionId="dca34107-4c35-4f6a-ba06-558b6f0fa06b" testId="ec3aedc7-42bf-e2d5-e241-a02f33d1a39e" testName="ConcatenationOfTypedTerminals" computerName="MARTIN-PC" duration="00:00:00.0002446" startTime="2011-03-18T16:53:15.5476626+00:00" endTime="2011-03-18T16:53:15.5506628+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dca34107-4c35-4f6a-ba06-558b6f0fa06b">
+    </UnitTestResult>
+    <UnitTestResult executionId="4c317f39-9380-4c7b-808f-d428b1b20d08" testId="eefb3d44-e0d5-00f5-893d-dc0765ca8824" testName="ConcatenateConcatenationRuleWithString" computerName="MARTIN-PC" duration="00:00:00.0002903" startTime="2011-03-18T16:53:15.5516628+00:00" endTime="2011-03-18T16:53:15.5576632+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c317f39-9380-4c7b-808f-d428b1b20d08">
+    </UnitTestResult>
+    <UnitTestResult executionId="a1df0607-db41-416b-b7af-6db8c533cb6f" testId="f223f713-4e8b-de5f-a42c-1fb64190de91" testName="ConcatenationOfNonTerminalAndString" computerName="MARTIN-PC" duration="00:00:00.0002124" startTime="2011-03-18T16:53:15.5596633+00:00" endTime="2011-03-18T16:53:15.5636635+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a1df0607-db41-416b-b7af-6db8c533cb6f">
+    </UnitTestResult>
+    <UnitTestResult executionId="984ba635-435f-4fff-99b9-7de9741bf800" testId="f2d2b3b1-c00a-637e-7dd6-e1f78615cce8" testName="ConcatenationOfNonTerminalAndTerminal" computerName="MARTIN-PC" duration="00:00:00.0002150" startTime="2011-03-18T16:53:15.5646636+00:00" endTime="2011-03-18T16:53:15.5676637+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="984ba635-435f-4fff-99b9-7de9741bf800">
+    </UnitTestResult>
+    <UnitTestResult executionId="26afdbd8-5c61-4e34-9abc-9ce63c6c8031" testId="f361bf6f-6274-717c-addf-54d14527e4bc" testName="CastStringIntoConcatenationRule" computerName="MARTIN-PC" duration="00:00:00.0001199" startTime="2011-03-18T16:53:15.5686638+00:00" endTime="2011-03-18T16:53:15.5716640+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="26afdbd8-5c61-4e34-9abc-9ce63c6c8031">
+    </UnitTestResult>
+    <UnitTestResult executionId="353a2aaf-00ec-4147-9e8c-6193a4c10e52" testId="fcaf3cb3-b4cd-6a40-9262-02a569e1b51d" testName="ConcatenateConcatenationRuleWithString" computerName="MARTIN-PC" duration="00:00:00.0002051" startTime="2011-03-18T16:53:15.5726640+00:00" endTime="2011-03-18T16:53:15.5756642+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="353a2aaf-00ec-4147-9e8c-6193a4c10e52">
+    </UnitTestResult>
+  </Results>
+</TestRun>

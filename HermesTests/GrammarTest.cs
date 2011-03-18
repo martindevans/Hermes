@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Hermes.Grammar;
+using Hermes.Bnf;
 using Hermes;
 
 namespace HermesTests
@@ -20,13 +20,19 @@ namespace HermesTests
             Terminal number = new Terminal("Number", @"\b\d+\b");
             Terminal plus = new Terminal("Plus", @"\+");
             Terminal multiply = @"\*";
-            Terminal whitespace = new Terminal("Whitespace", " |\n|\r", true);
 
             op.Rules = plus | multiply;
             expr.Rules = number + op + expr;
 
-            throw new NotImplementedException();
-            //Grammar g = new Grammar(expr);
+            Terminal whitespace = new Terminal("Whitespace", " |\n|\r", true);
+            Grammar g = new Grammar(expr, whitespace);
+
+            Assert.AreEqual(3, g.Terminals.Count());
+            Assert.AreEqual(2, g.NonTerminals.Count());
+
+            Lexer lexer = g.CreateLexer("1 + 2 * 3");
+
+            Assert.AreEqual(5, lexer.Count());
         }
     }
 }

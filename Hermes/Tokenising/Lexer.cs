@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
-using Hermes.Grammar;
+using Hermes.Bnf;
 using Hermes.Tokenising;
 using System.Text.RegularExpressions;
 
@@ -42,6 +42,17 @@ namespace Hermes
             using (var r = new StreamReader(new BufferedStream(stream)))
                 this.input = r.ReadToEnd();
 
+            this.terminals = terminals.ToArray();
+        }
+
+        public Lexer(string input, params Terminal[] terminals)
+            :this(input, terminals as IEnumerable<Terminal>)
+        {
+        }
+
+        public Lexer(string input, IEnumerable<Terminal> terminals)
+        {
+            this.input = input;
             this.terminals = terminals.ToArray();
         }
         #endregion

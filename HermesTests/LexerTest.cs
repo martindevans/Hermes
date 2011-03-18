@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using Hermes;
-using Hermes.Grammar;
+using Hermes.Bnf;
 using Hermes.Tokenising;
 
 namespace HermesTests

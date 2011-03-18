@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Hermes.Grammar
+namespace Hermes.Bnf
 {
     /// <summary>
     /// 
     /// </summary>
     public class Terminal
-        :BnfTerm
+        : BnfTerm
     {
-        public readonly Regex regex;
-        public bool IsIgnored = false;
+        public readonly Regex Regex;
+        public readonly bool IsIgnored = false;
 
         #region constructors
         public Terminal(string regex, bool isIgnored=false)
@@ -34,14 +34,14 @@ namespace Hermes.Grammar
         public Terminal(string name, Regex regex, bool isIgnored=false)
             :base(name)
         {
-            this.regex = regex;
+            this.Regex = regex;
             this.IsIgnored = isIgnored;
         }
         #endregion
 
         public bool Match(string input, int startIndex, out string match)
         {
-            var m = regex.Match(input, startIndex);
+            var m = Regex.Match(input, startIndex);
 
             if (!m.Success || m.Index != startIndex)
             {
@@ -69,7 +69,7 @@ namespace Hermes.Grammar
             if (other == null)
                 return false;
 
-            return regex.Equals(other.regex);
+            return Regex.Equals(other.Regex);
         }
     }
 }

@@ -2,19 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
-namespace Hermes.Grammar
+namespace Hermes.Bnf
 {
     public class ConcatenationRule
+        :IEnumerable<BnfTerm>
     {
         List<BnfTerm> terms = new List<BnfTerm>();
 
-        public ConcatenationRule(BnfTerm terminal)
+        public int Count
+        {
+            get
+            {
+                return terms.Count;
+            }
+        }
+
+        internal ConcatenationRule(BnfTerm terminal)
         {
             terms.Add(terminal);
         }
 
-        public ConcatenationRule(ConcatenationRule left, ConcatenationRule right)
+        internal ConcatenationRule(ConcatenationRule left, ConcatenationRule right)
         {
             terms.AddRange(left.terms);
             terms.AddRange(right.terms);
@@ -52,14 +62,24 @@ namespace Hermes.Grammar
             return new ConcatenationRule(left, right);
         }
 
+        public static RuleAlternation operator |(string left, ConcatenationRule right)
+        {
+            return new RuleAlternation(new Terminal(Regex.Escape(left)), right);
+        }
+
+        public static RuleAlternation operator |(ConcatenationRule left, ConcatenationRule right)
+        {
+            return new RuleAlternation(left, right);
+        }
+
         public static implicit operator RuleAlternation(ConcatenationRule r)
         {
             return new RuleAlternation(r);
         }
 
-        public static implicit operator ConcatenationRule(string regex)
+        public static implicit operator ConcatenationRule(string value)
         {
-            return new Terminal(regex);
+            return new Terminal(Regex.Escape(value));
         }
 
         public static implicit operator ConcatenationRule(Terminal terminal)
@@ -67,5 +87,15 @@ namespace Hermes.Grammar
             return new ConcatenationRule(terminal);
         }
         #endregion
+
+        public IEnumerator<BnfTerm> GetEnumerator()
+        {
+            return terms.GetEnumerator();
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
