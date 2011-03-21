@@ -45,10 +45,19 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlternationTesting.cs" />
+    <Compile Include="ConcatenationTesting.cs" />
+    <Compile Include="BnfTermTest.cs" />
+    <Compile Include="ConcatenationRuleTest.cs" />
+    <Compile Include="Grammars\MatchedBrackets.cs" />
+    <Compile Include="Grammars\MathExpression.cs" />
+    <Compile Include="GrammarTest.cs" />
     <Compile Include="NonTerminalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecursiveDescentTests.cs" />
+    <Compile Include="RuleAlternationTest.cs" />
     <Compile Include="TerminalTest.cs" />
-    <Compile Include="TokenStreamTest.cs" />
+    <Compile Include="LexerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hermes\Hermes.csproj">
@@ -56,6 +65,7 @@
       <Name>Hermes</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

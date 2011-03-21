@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="583051b7-26b6-4668-856e-dae8a14bc93b" name="Martin@MARTIN-PC 2011-03-18 17:53:14" runUser="Martin-PC\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-PC 2011-03-18 17_53_14">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-18T17:53:14.0984879+00:00" queuing="2011-03-18T17:53:15.2635546+00:00" start="2011-03-18T17:53:15.4145632+00:00" finish="2011-03-18T17:53:50.3305603+00:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MARTIN-PC" outcome="Error" timestamp="2011-03-18T17:53:50.3295602+00:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="StringPlusConcatenationRule" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="971bcaa7-42ec-82eb-defb-490d183d03b1">
+      <Execution id="b93964f7-6baf-4534-8bb6-0859448c62cb" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ConcatenationRuleTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StringPlusConcatenationRule" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="971bcaa7-42ec-82eb-defb-490d183d03b1" executionId="b93964f7-6baf-4534-8bb6-0859448c62cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b93964f7-6baf-4534-8bb6-0859448c62cb" testId="971bcaa7-42ec-82eb-defb-490d183d03b1" testName="StringPlusConcatenationRule" computerName="MARTIN-PC" duration="00:00:34.7869897" startTime="2011-03-18T17:53:15.5435706+00:00" endTime="2011-03-18T17:53:50.3305603+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b93964f7-6baf-4534-8bb6-0859448c62cb">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Hermes.Grammar;
+using Hermes.Bnf;
 using Hermes;
 
 namespace HermesTests
@@ -18,6 +18,15 @@ namespace HermesTests
         }
 
         [TestMethod]
+        public void CastStringIntoTerminal()
+        {
+            string s = "aaa";
+            Terminal t = s;
+
+            Assert.IsNotNull(t);
+        }
+
+        [TestMethod]
         public void MatchAString()
         {
             Terminal t = new Terminal("AAA", "AAA");
@@ -25,8 +34,7 @@ namespace HermesTests
             string aString = "AAABBB";
 
             string match;
-            Assert.IsTrue(t.Match(aString, out match));
-
+            Assert.IsTrue(t.Match(aString, 0, out match));
             Assert.AreEqual("AAA", match);
         }
 
@@ -38,8 +46,7 @@ namespace HermesTests
             string aString = "BBB";
 
             string match;
-            Assert.IsFalse(t.Match(aString, out match));
-
+            Assert.IsFalse(t.Match(aString, 0, out match));
             Assert.IsNull(match);
         }
 
@@ -51,9 +58,20 @@ namespace HermesTests
             string aString = "BBBAAA";
 
             string match;
-            Assert.IsFalse(t.Match(aString, out match));
-
+            Assert.IsFalse(t.Match(aString, 0, out match));
             Assert.IsNull(match);
+        }
+
+        [TestMethod]
+        public void MatchAStringNotAtIndexZeroButWithOffset()
+        {
+            Terminal t = new Terminal("AAA", "AAA");
+
+            string aString = "BBBAAA";
+
+            string match;
+            Assert.IsTrue(t.Match(aString, 3, out match));
+            Assert.AreEqual("AAA", match);
         }
 
         [TestMethod]
@@ -61,34 +79,8 @@ namespace HermesTests
         {
             Terminal a = new Terminal("a");
             Terminal b = new Terminal("b");
-            Rule operatorResult = a + b;
-            Rule methodResult = Terminal.Plus(a, b);
-
-            Assert.IsNotNull(operatorResult);
-            Assert.IsNotNull(methodResult);
-            Assert.AreEqual(operatorResult, methodResult);
-        }
-
-        [TestMethod]
-        public void TerminalPlusStringReturnsRule()
-        {
-            Terminal a = new Terminal("a");
-            string b = "b";
-            Rule operatorResult = a + b;
-            Rule methodResult = Terminal.Plus(a, b);
-
-            Assert.IsNotNull(operatorResult);
-            Assert.IsNotNull(methodResult);
-            Assert.AreEqual(operatorResult, methodResult);
-        }
-
-        [TestMethod]
-        public void StringPlusTerminalReturnsRule()
-        {
-            string a = "a";
-            Terminal b = new Terminal("b");
-            Rule operatorResult = a + b;
-            Rule methodResult = Terminal.Plus(a, b);
+            ConcatenationRule operatorResult = a + b;
+            ConcatenationRule methodResult = Terminal.Plus(a, b);
 
             Assert.IsNotNull(operatorResult);
             Assert.IsNotNull(methodResult);

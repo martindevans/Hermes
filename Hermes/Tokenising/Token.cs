@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Hermes.Grammar;
+using Hermes.Bnf;
 
 namespace Hermes.Tokenising
 {
@@ -10,11 +10,15 @@ namespace Hermes.Tokenising
     {
         public readonly Terminal Terminal;
         public readonly string Value;
+        public readonly int Line;
+        public readonly int Column;
 
-        public Token(Terminal terminal, string match)
+        public Token(Terminal terminal, string value, int line, int column)
         {
             this.Terminal = terminal;
-            this.Value = match;
+            this.Value = value;
+            this.Line = line;
+            this.Column = column;
         }
 
         public override string ToString()

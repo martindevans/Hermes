@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="fcf4cfac-c153-48f2-a52e-d8dae5a63e5a" name="Martin@MARTIN-PC 2011-03-18 14:42:06" runUser="Martin-PC\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-PC 2011-03-18 14_42_06">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-18T14:42:06.4535762+00:00" queuing="2011-03-18T14:42:06.5225801+00:00" start="2011-03-18T14:42:06.5285804+00:00" finish="2011-03-18T14:42:06.7655940+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ConcatenationOfTerminalAndNonTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="b3ce86c4-3ee0-b9cd-d97f-4fd97ab81b19">
+      <Execution id="c937d9ee-01dc-46df-aca4-ab516ef0e61e" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ImplicitCastingTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTerminalAndNonTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTypedNonTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="44d154a1-0fff-ffe5-69cb-838d0c12a356">
+      <Execution id="9c6cfee9-cb04-475c-abb1-9362d21d2200" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ImplicitCastingTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTypedNonTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfNonTerminalAndTerminal" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="c726892a-6f3b-f8f3-e626-ded2ea56a54b">
+      <Execution id="0aff79f0-f33d-4bd8-92e1-6d8e2b8ad85f" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ImplicitCastingTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfNonTerminalAndTerminal" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfTypedTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="489180e6-db02-a46f-c1fe-50d8d71ad590">
+      <Execution id="9511dd61-f33a-468c-87c3-77ee9e09171b" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ImplicitCastingTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfTypedTerminals" />
+    </UnitTest>
+    <UnitTest name="ConcatenationOfUntypedTerminals" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="8182a2a7-8e5d-c3d9-030b-ad537260c9a4">
+      <Execution id="34f9d106-f612-461a-bdbc-970b250824e9" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.ImplicitCastingTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConcatenationOfUntypedTerminals" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="44d154a1-0fff-ffe5-69cb-838d0c12a356" executionId="9c6cfee9-cb04-475c-abb1-9362d21d2200" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="489180e6-db02-a46f-c1fe-50d8d71ad590" executionId="9511dd61-f33a-468c-87c3-77ee9e09171b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8182a2a7-8e5d-c3d9-030b-ad537260c9a4" executionId="34f9d106-f612-461a-bdbc-970b250824e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3ce86c4-3ee0-b9cd-d97f-4fd97ab81b19" executionId="c937d9ee-01dc-46df-aca4-ab516ef0e61e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c726892a-6f3b-f8f3-e626-ded2ea56a54b" executionId="0aff79f0-f33d-4bd8-92e1-6d8e2b8ad85f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9c6cfee9-cb04-475c-abb1-9362d21d2200" testId="44d154a1-0fff-ffe5-69cb-838d0c12a356" testName="ConcatenationOfTypedNonTerminals" computerName="MARTIN-PC" duration="00:00:00.0120193" startTime="2011-03-18T14:42:06.5325807+00:00" endTime="2011-03-18T14:42:06.7175913+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c6cfee9-cb04-475c-abb1-9362d21d2200">
+    </UnitTestResult>
+    <UnitTestResult executionId="9511dd61-f33a-468c-87c3-77ee9e09171b" testId="489180e6-db02-a46f-c1fe-50d8d71ad590" testName="ConcatenationOfTypedTerminals" computerName="MARTIN-PC" duration="00:00:00.0005445" startTime="2011-03-18T14:42:06.7175913+00:00" endTime="2011-03-18T14:42:06.7225915+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9511dd61-f33a-468c-87c3-77ee9e09171b">
+    </UnitTestResult>
+    <UnitTestResult executionId="34f9d106-f612-461a-bdbc-970b250824e9" testId="8182a2a7-8e5d-c3d9-030b-ad537260c9a4" testName="ConcatenationOfUntypedTerminals" computerName="MARTIN-PC" duration="00:00:00.0003426" startTime="2011-03-18T14:42:06.7245917+00:00" endTime="2011-03-18T14:42:06.7275918+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34f9d106-f612-461a-bdbc-970b250824e9">
+    </UnitTestResult>
+    <UnitTestResult executionId="c937d9ee-01dc-46df-aca4-ab516ef0e61e" testId="b3ce86c4-3ee0-b9cd-d97f-4fd97ab81b19" testName="ConcatenationOfTerminalAndNonTerminal" computerName="MARTIN-PC" duration="00:00:00.0008743" startTime="2011-03-18T14:42:06.7355923+00:00" endTime="2011-03-18T14:42:06.7465929+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c937d9ee-01dc-46df-aca4-ab516ef0e61e">
+    </UnitTestResult>
+    <UnitTestResult executionId="0aff79f0-f33d-4bd8-92e1-6d8e2b8ad85f" testId="c726892a-6f3b-f8f3-e626-ded2ea56a54b" testName="ConcatenationOfNonTerminalAndTerminal" computerName="MARTIN-PC" duration="00:00:00.0009047" startTime="2011-03-18T14:42:06.7485930+00:00" endTime="2011-03-18T14:42:06.7535933+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0aff79f0-f33d-4bd8-92e1-6d8e2b8ad85f">
+    </UnitTestResult>
+  </Results>
+</TestRun>
