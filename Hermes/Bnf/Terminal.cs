@@ -15,8 +15,10 @@ namespace Hermes.Bnf
         public readonly Regex Regex;
         public readonly bool IsIgnored = false;
 
+        public static readonly Terminal Empty = new Terminal("");
+
         #region constructors
-        public Terminal(string regex, bool isIgnored=false)
+        public Terminal(string regex, bool isIgnored = false)
             : this(regex, regex, isIgnored)
         {
         }
@@ -31,8 +33,8 @@ namespace Hermes.Bnf
         {
         }
 
-        public Terminal(string name, Regex regex, bool isIgnored=false)
-            :base(name)
+        public Terminal(string name, Regex regex, bool isIgnored = false)
+            : base(name)
         {
             this.Regex = regex;
             this.IsIgnored = isIgnored;
@@ -58,6 +60,11 @@ namespace Hermes.Bnf
             return Name;
         }
 
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
+        }
+
         public static implicit operator Terminal(string regex)
         {
             return new Terminal(regex);
@@ -66,10 +73,33 @@ namespace Hermes.Bnf
         public override bool Equals(object obj)
         {
             Terminal other = obj as Terminal;
-            if (other == null)
+            if (object.ReferenceEquals(other, null))
                 return false;
 
-            return Regex.Equals(other.Regex);
+            return Regex.ToString().Equals(other.Regex.ToString());
+        }
+
+        protected override bool CalculateIsNullable()
+        {
+            return Regex.IsMatch("") || IsIgnored;
+        }
+
+        public static bool operator ==(Terminal a, Terminal b)
+        {
+            if (a == null)
+            {
+                if (b == null)
+                    return true;
+                else
+                    return false;
+            }
+
+            return a.Equals(b);
+        }
+
+        public static bool operator !=(Terminal a, Terminal b)
+        {
+            return !a.Equals(b);
         }
     }
 }

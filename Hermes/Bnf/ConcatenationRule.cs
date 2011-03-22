@@ -56,6 +56,17 @@ namespace Hermes.Bnf
             return true;
         }
 
+        public bool IsNullable()
+        {
+            foreach (var term in this)
+            {
+                if (!term.IsNullable())
+                    return false;
+            }
+
+            return true;
+        }
+
         #region operators
         public static ConcatenationRule operator +(ConcatenationRule left, ConcatenationRule right)
         {

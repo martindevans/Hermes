@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Bnf\BnfTerm.cs" />
     <Compile Include="Bnf\Grammar.cs" />
+    <Compile Include="Bnf\Production.cs" />
     <Compile Include="Parsers\ParseTree.cs" />
     <Compile Include="Bnf\RuleAlternation.cs" />
     <Compile Include="Bnf\Terminal.cs" />
