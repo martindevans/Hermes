@@ -21,16 +21,6 @@ namespace Hermes.Bnf
             return Name;
         }
 
-        protected override bool CalculateIsNullable()
-        {
-            foreach (ConcatenationRule rule in Rules)
-            {
-                if (rule.IsNullable())
-                    return true;
-            }
-            return false;
-        }
-
         public override bool Equals(object obj)
         {
             return object.ReferenceEquals(obj, this);

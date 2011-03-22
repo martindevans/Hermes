@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="25b2e097-5938-414d-8b56-c71393716ba4" name="Martin@MARTIN-PC 2011-03-22 16:35:30" runUser="Martin-PC\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-PC 2011-03-22 16_35_30">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-22T16:35:30.2361509+00:00" queuing="2011-03-22T16:35:30.4111609+00:00" start="2011-03-22T16:35:30.4511632+00:00" finish="2011-03-22T16:35:30.8281847+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IsNullable" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="2250b09f-0ce4-e672-04ba-75e88a234206">
+      <Execution id="8e4c561c-462d-4ad6-b8af-6137f3d6fea8" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.GrammarTest, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsNullable" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="2250b09f-0ce4-e672-04ba-75e88a234206" executionId="8e4c561c-462d-4ad6-b8af-6137f3d6fea8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8e4c561c-462d-4ad6-b8af-6137f3d6fea8" testId="2250b09f-0ce4-e672-04ba-75e88a234206" testName="IsNullable" computerName="MARTIN-PC" duration="00:00:00.0953259" startTime="2011-03-22T16:35:30.4681641+00:00" endTime="2011-03-22T16:35:30.7901826+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e4c561c-462d-4ad6-b8af-6137f3d6fea8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsFalse failed. </Message>
+          <StackTrace>   at HermesTests.GrammarTest.IsNullable() in C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\HermesTests\GrammarTest.cs:line 93
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

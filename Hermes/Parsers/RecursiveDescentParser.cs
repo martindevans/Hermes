@@ -8,7 +8,7 @@ using System.IO;
 namespace Hermes.Parsers
 {
     public class RecursiveDescentParser
-        : IParser
+        : Parser
     {
         private Grammar g;
 
@@ -24,7 +24,7 @@ namespace Hermes.Parsers
             throw new NotImplementedException();
         }
 
-        public ParseTree Parse(Stream input)
+        public override ParseTree Parse(Stream input)
         {
             var root = Parse(new StreamReader(input), g.Root);
 

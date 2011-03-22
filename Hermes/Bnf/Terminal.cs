@@ -17,6 +17,16 @@ namespace Hermes.Bnf
 
         public static readonly Terminal Empty = new Terminal("");
 
+        bool nullable;
+        public override bool IsNullable
+        {
+            get
+            {
+                return nullable;
+            }
+            internal set{}
+        }
+
         #region constructors
         public Terminal(string regex, bool isIgnored = false)
             : this(regex, regex, isIgnored)
@@ -38,6 +48,7 @@ namespace Hermes.Bnf
         {
             this.Regex = regex;
             this.IsIgnored = isIgnored;
+            this.nullable = Regex.IsMatch("") || IsIgnored;
         }
         #endregion
 
@@ -77,11 +88,6 @@ namespace Hermes.Bnf
                 return false;
 
             return Regex.ToString().Equals(other.Regex.ToString());
-        }
-
-        protected override bool CalculateIsNullable()
-        {
-            return Regex.IsMatch("") || IsIgnored;
         }
 
         public static bool operator ==(Terminal a, Terminal b)

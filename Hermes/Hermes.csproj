@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Bnf\BnfTerm.cs" />
     <Compile Include="Bnf\Grammar.cs" />
+    <Compile Include="Bnf\ISetExtensions.cs" />
     <Compile Include="Bnf\Production.cs" />
     <Compile Include="Parsers\ParseTree.cs" />
     <Compile Include="Bnf\RuleAlternation.cs" />
@@ -49,7 +50,7 @@
     <Compile Include="Bnf\NonTerminal.cs" />
     <Compile Include="Bnf\ConcatenationRule.cs" />
     <Compile Include="Bnf\StringExtensions.cs" />
-    <Compile Include="Parsers\IParser.cs" />
+    <Compile Include="Parsers\Parser.cs" />
     <Compile Include="Parsers\ParseTreeNode.cs" />
     <Compile Include="Parsers\RecursiveDescentParser.cs" />
     <Compile Include="Tokenising\Token.cs" />

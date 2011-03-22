@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ae6b2f5f-4909-492f-9e21-23724032253e" name="Martin@MARTIN-PC 2011-03-22 16:56:36" runUser="Martin-PC\Martin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c13f3ac4-e06d-4c27-8158-208f7bf0acb6">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Martin_MARTIN-PC 2011-03-22 16_56_36">
+      <DeploymentItem filename="C:\Users\Martin\Documents\Visual Studio 2010\Projects\Hermes\Hermes\bin\Debug\Hermes.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-22T16:56:36.1065545+00:00" queuing="2011-03-22T16:56:37.0336075+00:00" start="2011-03-22T16:56:37.1786158+00:00" finish="2011-03-22T16:56:47.4972060+00:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MARTIN-PC" outcome="Error" timestamp="2011-03-22T16:56:47.4962060+00:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ConstructRecursiveDescentParser" storage="c:\users\martin\documents\visual studio 2010\projects\hermes\hermestests\bin\debug\hermestests.dll" id="ec17d828-5496-163d-69a5-8bce54583178">
+      <Execution id="b5fd7549-9a71-4c50-8404-a2971024efdc" />
+      <TestMethod codeBase="C:/Users/Martin/Documents/Visual Studio 2010/Projects/Hermes/HermesTests/bin/Debug/HermesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HermesTests.RecursiveDescentTests, HermesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructRecursiveDescentParser" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ec17d828-5496-163d-69a5-8bce54583178" executionId="b5fd7549-9a71-4c50-8404-a2971024efdc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b5fd7549-9a71-4c50-8404-a2971024efdc" testId="ec17d828-5496-163d-69a5-8bce54583178" testName="ConstructRecursiveDescentParser" computerName="MARTIN-PC" duration="00:00:10.1325796" startTime="2011-03-22T16:56:37.3636264+00:00" endTime="2011-03-22T16:56:47.4962060+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5fd7549-9a71-4c50-8404-a2971024efdc">
+    </UnitTestResult>
+  </Results>
+</TestRun>

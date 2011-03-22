@@ -53,7 +53,9 @@ namespace Hermes.Bnf
             this.whitespace = whitespace;
 
             ConstructGrammar(root);
+            CalculateNullable();
             CalculateFirstSymbols();
+            CalculateFollowSets();
         }
         #endregion
 
@@ -77,6 +79,27 @@ namespace Hermes.Bnf
             }
         }
 
+        private void CalculateNullable()
+        {
+            bool changed = false;
+            do
+            {
+                changed = false;
+
+                foreach (var production in Productions)
+                {
+                    if (production.Head.IsNullable)
+                        continue;
+
+                    if (production.Body.All(a => a.IsNullable))
+                    {
+                        production.Head.IsNullable = true;
+                        changed = true;
+                    }
+                }
+            } while (changed);
+        }
+
         private void CalculateFirstSymbols()
         {
             foreach (var terminal in Terminals)
@@ -98,14 +121,10 @@ namespace Hermes.Bnf
                     for (int i = 0; i < production.Body.Length; i++)
                     {
                         var firstOfTerm = firstSymbol[production.Body[i]];
-                        var set = firstSymbol[production.Head];
 
-                        int before = set.Count;
-                        set.UnionWith(firstOfTerm);
-                        if (before < set.Count)
-                            change = true;
+                        change = firstSymbol[production.Head].UnionWithAddedCount(firstOfTerm) != 0;
 
-                        if (!production.Body[i].IsNullable())
+                        if (!production.Body[i].IsNullable)
                             break;
                     }
                 }
@@ -127,9 +146,30 @@ namespace Hermes.Bnf
                 {
                     for (int i = 0; i < production.Body.Length; i++)
                     {
+                        NonTerminal nt = production.Body[i] as NonTerminal;
+                        if (nt == null)
+                            continue;
+
+                        var set = follow[nt];
+
+                        for (int j = production.Body.Length - 1; j >= i; j--)
+                        {
+                            //found a nonterminal midway through a production
+                            //if it's followed only by nullable terms, the follow of the entire production is in the follow of this non terminal
+                            changed = set.UnionWithAddedCount(follow[production.Head]) != 0;
+
+                            //working backwards, break as soon as we find a non nullable term
+                            if (!production.Body[j].IsNullable)
+                                break;
+                        }
+
+                        //keep adding symbols to the follow set until we find a non nullable term partway through the production
                         for (int j = i + 1; j < production.Body.Length; j++)
                         {
-                            
+                            changed = follow[nt].UnionWithAddedCount(firstSymbol[production.Body[j]]) != 0;
+
+                            if (!production.Body[j].IsNullable)
+                                break;
                         }
                     }
                 }
@@ -162,7 +202,7 @@ namespace Hermes.Bnf
             ISet<Terminal> result = new HashSet<Terminal>();
             result.UnionWith(firstSymbol[first]);
 
-            if (first.IsNullable())
+            if (first.IsNullable)
                 result.UnionWith(GetFirstSet(terms.Skip(1)));
 
             return result;
@@ -172,7 +212,7 @@ namespace Hermes.Bnf
         #region follow
         public ISet<Terminal> GetFollowSet(NonTerminal a)
         {
-
+            return follow[a];
         }
         #endregion
     }

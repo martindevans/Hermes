@@ -89,9 +89,28 @@ namespace HermesTests
 
             Grammar g = new Grammar(a);
 
-            Assert.IsTrue(b.IsNullable());
-            Assert.IsFalse(a.IsNullable());
-            Assert.IsFalse(c.IsNullable());
+            Assert.IsTrue(b.IsNullable);
+            Assert.IsFalse(a.IsNullable);
+            Assert.IsFalse(c.IsNullable);
+        }
+
+        [TestMethod]
+        public void GetFollowSet()
+        {
+            NonTerminal a = new NonTerminal("A");
+            NonTerminal b = new NonTerminal("B");
+
+            a.Rules = "a" + b;
+            b.Rules = b + "a" | "c";
+
+            Grammar g = new Grammar(a);
+
+            var followA = g.GetFollowSet(a);
+            Assert.AreEqual(0, followA.Count);
+
+            var followB = g.GetFollowSet(b);
+            Assert.AreEqual(1, followB.Count);
+            Assert.IsTrue(followB.Contains("a"));
         }
     }
 }

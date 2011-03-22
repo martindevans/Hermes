@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Hermes.Bnf;
 using Hermes;
 using Hermes.Parsers;
+using HermesTests.Grammars;
 
 namespace HermesTests
 {
@@ -15,21 +16,11 @@ namespace HermesTests
         [TestMethod]
         public void ConstructRecursiveDescentParser()
         {
-            NonTerminal op = new NonTerminal("Operator");
-            NonTerminal expr = new NonTerminal("Expression");
+            Grammar g = new MatchedBrackets("(", ")");
 
-            Terminal number = new Terminal("Number", @"\b\d+\b");
-            Terminal plus = new Terminal("Plus", @"\+");
-            Terminal multiply = @"\*";
+            Parser parser = new RecursiveDescentParser(g);
 
-            op.Rules = plus | multiply;
-            expr.Rules = number + op + expr;
-
-            Grammar g = new Grammar(expr);
-
-            IParser parser = new RecursiveDescentParser(g);
+            parser.Parse("((()(()))())");
         }
-
-
     }
 }

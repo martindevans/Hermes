@@ -47,16 +47,11 @@ namespace Hermes.Bnf
         }
 
         #region nullable
-        bool? nullable = null;
-        public bool IsNullable()
+        public virtual bool IsNullable
         {
-            if (!nullable.HasValue)
-                nullable = CalculateIsNullable();
-
-            return nullable.Value;
+            get;
+            internal set;
         }
-
-        protected abstract bool CalculateIsNullable();
         #endregion
     }
 }

@@ -60,7 +60,7 @@ namespace Hermes.Bnf
         {
             foreach (var term in this)
             {
-                if (!term.IsNullable())
+                if (!term.IsNullable)
                     return false;
             }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Hermes.Bnf;
+using System.Text.RegularExpressions;
 
 namespace HermesTests.Grammars
 {
@@ -21,8 +22,8 @@ namespace HermesTests.Grammars
 
         private static NonTerminal ConstructGrammar(string openBracket, string closeBracket)
         {
-            Terminal open = new Terminal(openBracket);
-            Terminal close = new Terminal(closeBracket);
+            Terminal open = new Terminal(Regex.Escape(openBracket));
+            Terminal close = new Terminal(Regex.Escape(closeBracket));
 
             NonTerminal s = new NonTerminal("S");
 
