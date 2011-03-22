@@ -34,5 +34,64 @@ namespace HermesTests
 
             Assert.AreEqual(5, lexer.Count());
         }
+
+        [TestMethod]
+        public void GetFirstSet()
+        {
+            NonTerminal a = new NonTerminal("A");
+            NonTerminal b = new NonTerminal("B");
+            NonTerminal c = new NonTerminal("C");
+            NonTerminal d = new NonTerminal("D");
+
+            a.Rules = b + d | c + d;
+            b.Rules = "b";
+            c.Rules = "c";
+            d.Rules = "d";
+
+            Grammar g = new Grammar(a);
+            var set = g.GetFirstSet(a);
+
+            Assert.IsNotNull(set);
+            Assert.AreEqual(2, set.Count);
+            Assert.IsFalse(set.Contains("d"));
+            Assert.IsTrue(set.Contains("b"));
+            Assert.IsTrue(set.Contains("c"));
+        }
+
+        [TestMethod]
+        public void GetFirstSetWithEmptyStrings()
+        {
+            NonTerminal a = new NonTerminal("A");
+            NonTerminal b = new NonTerminal("B");
+
+            a.Rules = b + "s";
+            b.Rules = "".AsTerminal() | "x";
+
+            Grammar g = new Grammar(a);
+            var set = g.GetFirstSet(a);
+
+            Assert.IsNotNull(set);
+            Assert.AreEqual(2, set.Count);
+            Assert.IsTrue(set.Contains("x"));
+            Assert.IsTrue(set.Contains("s"));
+        }
+
+        [TestMethod]
+        public void IsNullable()
+        {
+            NonTerminal a = new NonTerminal("A");
+            NonTerminal b = new NonTerminal("B");
+            NonTerminal c = new NonTerminal("C");
+
+            a.Rules = b + "s";
+            b.Rules = "".AsTerminal() | c;
+            c.Rules = "c";
+
+            Grammar g = new Grammar(a);
+
+            Assert.IsTrue(b.IsNullable());
+            Assert.IsFalse(a.IsNullable());
+            Assert.IsFalse(c.IsNullable());
+        }
     }
 }

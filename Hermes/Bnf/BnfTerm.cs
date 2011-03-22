@@ -39,9 +39,24 @@ namespace Hermes.Bnf
             return new RuleAlternation(left, right);
         }
 
+        public abstract override bool Equals(object obj);
+
         public override int GetHashCode()
         {
             return Name.GetHashCode();
         }
+
+        #region nullable
+        bool? nullable = null;
+        public bool IsNullable()
+        {
+            if (!nullable.HasValue)
+                nullable = CalculateIsNullable();
+
+            return nullable.Value;
+        }
+
+        protected abstract bool CalculateIsNullable();
+        #endregion
     }
 }

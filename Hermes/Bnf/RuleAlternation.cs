@@ -36,6 +36,18 @@ namespace Hermes.Bnf
             options.Add(b);
         }
 
+        public override bool Equals(object obj)
+        {
+            RuleAlternation a = obj as RuleAlternation;
+            if (a == null)
+                return false;
+
+            if (a.Count != this.Count)
+                return false;
+
+            return a.Zip(this, (x, y) => x.Equals(y)).Aggregate((x, y) => x && y);
+        }
+
         #region operators
         public static RuleAlternation operator |(RuleAlternation left, ConcatenationRule right)
         {
