@@ -10,19 +10,25 @@ namespace Hermes.Parsers
 {
     public class ParseTreeNode
     {
-        private readonly ParseTreeNode parent;
-        private readonly ReadOnlyCollection<ParseTreeNode> children;
+        private ParseTreeNode parent;
+        private readonly List<ParseTreeNode> children = new List<ParseTreeNode>();
         private readonly NonTerminal nonTerminal;
         private readonly Token token;
 
         public ParseTreeNode Parent
         {
             get { return parent; }
+            private set
+            {
+                parent = value;
+                if (parent != null)
+                    parent.children.Add(this);
+            }
         }
 
         public ReadOnlyCollection<ParseTreeNode> Children
         {
-            get { return children; }
+            get { return new ReadOnlyCollection<ParseTreeNode>(children); }
         }
 
         public NonTerminal NonTerminal
@@ -37,19 +43,18 @@ namespace Hermes.Parsers
 
         public bool IsLeaf
         {
-            get { return nonTerminal == null; }
+            get { return children.FirstOrDefault() == null; }
         }
 
-        public ParseTreeNode(ParseTreeNode parent, IEnumerable<ParseTreeNode> children, NonTerminal nonTerminal)
+        public ParseTreeNode(ParseTreeNode parent, NonTerminal nonTerminal)
         {
-            this.parent = parent;
-            this.children = new ReadOnlyCollection<ParseTreeNode>(children.ToArray());
+            this.Parent = parent;
             this.nonTerminal = nonTerminal;
         }
 
         public ParseTreeNode(ParseTreeNode parent, Token token)
         {
-            this.parent = parent;
+            this.Parent = parent;
             this.token = token;
         }
     }

@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Hermes.Bnf;
 using System.Text.RegularExpressions;
 
 namespace HermesTests.Grammars
 {
     public class MatchedBrackets
-        :Grammar
+       : Grammar
     {
         public MatchedBrackets(string openBracket, string closeBracket)
             : base(ConstructGrammar(openBracket, closeBracket), GetWhitespace())
@@ -26,8 +27,7 @@ namespace HermesTests.Grammars
             Terminal close = new Terminal(Regex.Escape(closeBracket));
 
             NonTerminal s = new NonTerminal("S");
-
-            s.Rules = s + s | open + s + close | open + close;
+            s.Rules = open + s + close | "";
 
             return s;
         }

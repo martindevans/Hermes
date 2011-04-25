@@ -20,7 +20,12 @@ namespace HermesTests
 
             Parser parser = new RecursiveDescentParser(g);
 
-            parser.Parse("((()(()))())");
+            var p = parser.Parse("(())");
+
+            Assert.IsNotNull(p);
+            Assert.IsFalse(p.Root.IsLeaf);
+            Assert.AreEqual("S", p.Root.NonTerminal.Name);
+            Assert.AreEqual(3, p.Root.Children.Count);
         }
     }
 }

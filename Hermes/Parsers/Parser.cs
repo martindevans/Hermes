@@ -15,6 +15,8 @@ namespace Hermes.Parsers
             MemoryStream m = new MemoryStream();
             StreamWriter w = new StreamWriter(m);
             w.Write(input);
+            w.Flush();
+            m.Position = 0;
 
             return Parse(m);
         }
