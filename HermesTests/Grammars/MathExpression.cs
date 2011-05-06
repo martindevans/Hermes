@@ -24,7 +24,7 @@ namespace HermesTests.Grammars
 
             expression.Rules = expression + "+" + term | expression + "-" + term | term;
             term.Rules       = term + "*" + factor | term + "/" + factor | factor;
-
+            factor.Rules     = "(" + expression + ")" | number;
 
             return expression;
         }

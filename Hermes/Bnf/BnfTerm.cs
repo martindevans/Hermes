@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Hermes.Bnf
 {
@@ -31,7 +32,7 @@ namespace Hermes.Bnf
 
         public static implicit operator BnfTerm(string regex)
         {
-            return new Terminal(regex);
+            return new Terminal(Regex.Escape(regex));
         }
 
         public static RuleAlternation operator |(BnfTerm left, BnfTerm right)

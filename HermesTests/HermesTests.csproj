@@ -58,6 +58,7 @@
     <Compile Include="Grammars\MatchedBrackets.cs" />
     <Compile Include="Grammars\MathExpression.cs" />
     <Compile Include="GrammarTest.cs" />
+    <Compile Include="ItemTest.cs" />
     <Compile Include="NonTerminalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecursiveDescentTests.cs" />
