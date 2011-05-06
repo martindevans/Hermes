@@ -4,3 +4,4 @@ HermesTests/bin/*
 Hermes/obj/*
 HermesTests/obj/*
 *.trx
+TestResults/*
