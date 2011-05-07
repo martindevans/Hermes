@@ -11,7 +11,7 @@ using HermesTests.Grammars;
 namespace HermesTests
 {
     [TestClass]
-    public class RecursiveDescentTests
+    public class RecursiveDescentTest
     {
         [TestMethod]
         public void ParseMatchedBracketsWithRecursiveDescent()

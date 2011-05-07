@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Hermes.Bnf;
 using HermesTests.Grammars;
 using System.Text.RegularExpressions;
+using Hermes.Parsers;
 
 namespace HermesTests
 {

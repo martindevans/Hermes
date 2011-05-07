@@ -42,12 +42,17 @@
   <ItemGroup>
     <Compile Include="Bnf\BnfTerm.cs" />
     <Compile Include="Bnf\Grammar.cs" />
-    <Compile Include="Bnf\IEnumerableExtension.cs" />
+    <Compile Include="IEnumerableExtension.cs" />
     <Compile Include="Bnf\InvalidGrammarException.cs" />
-    <Compile Include="Bnf\ISetExtensions.cs" />
-    <Compile Include="Bnf\Item.cs" />
+    <Compile Include="ISetExtensions.cs" />
+    <Compile Include="Parsers\Item.cs" />
+    <Compile Include="Parsers\ParseState.cs" />
     <Compile Include="Bnf\Production.cs" />
+    <Compile Include="Parsers\Automaton.cs" />
+    <Compile Include="Parsers\LR0.cs" />
+    <Compile Include="Parsers\LRParserBase.cs" />
     <Compile Include="Parsers\ParseException.cs" />
+    <Compile Include="Parsers\ParseStateTransition.cs" />
     <Compile Include="Parsers\ParseTree.cs" />
     <Compile Include="Bnf\RuleAlternation.cs" />
     <Compile Include="Bnf\Terminal.cs" />
@@ -57,6 +62,7 @@
     <Compile Include="Parsers\Parser.cs" />
     <Compile Include="Parsers\ParseTreeNode.cs" />
     <Compile Include="Parsers\RecursiveDescentParser.cs" />
+    <Compile Include="Parsers\SLR1.cs" />
     <Compile Include="Tokenising\Token.cs" />
     <Compile Include="Tokenising\Lexer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

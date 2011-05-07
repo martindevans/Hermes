@@ -12,35 +12,32 @@ namespace Hermes.Parsers
     public class RecursiveDescentParser
         : Parser
     {
-        private Grammar g;
-
         private Dictionary<NonTerminal, Dictionary<Terminal, Production?>> predictiveParseTable = new Dictionary<NonTerminal, Dictionary<Terminal, Production?>>();
 
         public RecursiveDescentParser(Grammar g)
+            :base(g)
         {
-            this.g = g;
-
             ConstructPredictiveParseTable();
         }
 
         private void ConstructPredictiveParseTable()
         {
-            foreach (var nonTerminals in g.NonTerminals)
+            foreach (var nonTerminals in Grammar.NonTerminals)
 	        {
                 var dict = new Dictionary<Terminal, Production?>();
                 predictiveParseTable[nonTerminals] = dict;
 
-                foreach (var terminal in g.Terminals)
+                foreach (var terminal in Grammar.Terminals)
                     dict[terminal] = null;
 	        }
 
-            foreach (var production in g.Productions)
+            foreach (var production in Grammar.Productions)
             {
-                var first = g.GetFirstSet(production.Body);
+                var first = Grammar.GetFirstSet(production.Body);
                 foreach (var element in first)
                 {
                     if (production.Body.All(a => a.IsNullable))
-                        foreach (var a in g.GetFollowSet(production.Head))
+                        foreach (var a in Grammar.GetFollowSet(production.Head))
                             Assign(production.Head, a, production);
                     else
                         Assign(production.Head, element, production);
@@ -56,18 +53,11 @@ namespace Hermes.Parsers
             predictiveParseTable[head][term] = production;
         }
 
-        public override ParseTree Parse(Stream input)
+        protected override ParseTreeNode Parse(Lexer lexer, NonTerminal root)
         {
-            var root = Parse(new StreamReader(input), g.Root);
+            IEnumerator<Token> tokens = lexer.GetEnumerator();
 
-            return new ParseTree(root);
-        }
-
-        private ParseTreeNode Parse(StreamReader input, NonTerminal root)
-        {
-            IEnumerator<Token> lexer = g.CreateLexer(input.ReadToEnd()).GetEnumerator();
-
-            var eof = !lexer.MoveNext();
+            var eof = !tokens.MoveNext();
 
             if (eof)
             {
@@ -77,7 +67,7 @@ namespace Hermes.Parsers
                     throw new ParseException("Empty string not matched by grammar");
             }
 
-            return Parse(lexer, root, null);
+            return Parse(tokens, root, null);
         }
 
         private ParseTreeNode Parse(IEnumerator<Token> lexer, NonTerminal current, ParseTreeNode parent)

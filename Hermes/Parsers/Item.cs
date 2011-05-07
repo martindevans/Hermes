@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Hermes.Bnf;
 
-namespace Hermes.Bnf
+namespace Hermes.Parsers
 {
     public struct Item
     {
@@ -19,7 +20,7 @@ namespace Hermes.Bnf
         public override string ToString()
         {
             int pos = Position;
-            return Production.Head.ToString() + " => " + String.Join(" ", Production.Body.Select((a, i) => (i == pos ? "." : "") + a.ToString()));
+            return Production.Head.ToString() + " => " + String.Join(" ", Production.Body.Select((a, i) => (i == pos ? "." : "") + a.ToString())) + (Position == Production.Body.Length ? "." : "");
         }
 
         public override int GetHashCode()

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Hermes.Parsers;
 
 namespace Hermes.Bnf
 {
     public static class IEnumerableExtension
     {
-        public static IEnumerable<Item> Closure(this IEnumerable<Item> items, Grammar grammar)
+        public static ParseState Closure(this IEnumerable<Item> items, Grammar grammar)
         {
             HashSet<Item> closure = new HashSet<Item>(items);
             HashSet<Item> toAdd = new HashSet<Item>();
@@ -16,6 +17,9 @@ namespace Hermes.Bnf
                 toAdd.Clear();
                 foreach (var item in closure)
                 {
+                    if (item.Position == item.Production.Body.Length)
+                        continue;
+
                     BnfTerm term = item.Production.Body[item.Position];
 
                     if (term is NonTerminal)
@@ -28,10 +32,10 @@ namespace Hermes.Bnf
             }
             while (closure.UnionWithAddedCount(toAdd) > 0);
 
-            return closure;
+            return new ParseState(closure);
         }
 
-        public static IEnumerable<Item> Goto(this IEnumerable<Item> state, Terminal symbol, Grammar grammar)
+        public static ParseState Goto(this IEnumerable<Item> state, BnfTerm symbol, Grammar grammar)
         {
             HashSet<Item> items = new HashSet<Item>();
 
@@ -39,14 +43,11 @@ namespace Hermes.Bnf
             {
                 BnfTerm term = item.Production.Body[item.Position];
 
-                if (term is Terminal)
-                {
-                    if ((term as Terminal).Equals(symbol))
-                        items.Add(new Item(item.Production, item.Position + 1));
-                }
+                if (term.Equals(symbol))
+                    items.Add(new Item(item.Production, item.Position + 1));
             }
 
-            return items.Closure(grammar);
+            return new ParseState(items.Closure(grammar));
         }
     }
 }
