@@ -18,7 +18,7 @@ namespace HermesTests
             NonTerminal T = new NonTerminal("T");
             NonTerminal F = new NonTerminal("F");
 
-            S.Rules = T + "$";
+            S.Rules = T;
             T.Rules = T + "*" + F | F;
             F.Rules = "(" + T + ")" | new Terminal("ID", "([A-Z]|[a-z])+");
 
@@ -26,8 +26,26 @@ namespace HermesTests
 
             Automaton a = LR0.CreateAutomaton(g);
 
-            Assert.AreEqual(5, a.Terminals.Count());
-            Assert.AreEqual(9 + 1, a.States.Count()); //example shows 9 states, we have 10 due to the finishing state also being considered a state
+            Assert.AreEqual(4, a.Terminals.Count());
+            Assert.AreEqual(9, a.States.Count());
+        }
+
+        [TestMethod]
+        public void ParseString()
+        {
+            NonTerminal S = new NonTerminal("S");
+            NonTerminal T = new NonTerminal("T");
+            NonTerminal F = new NonTerminal("F");
+
+            S.Rules = T;
+            T.Rules = T + "*" + F | F;
+            F.Rules = "(" + T + ")" | new Terminal("ID", "([A-Z]|[a-z])+");
+
+            Grammar g = new Grammar(S, new Terminal(" ", isIgnored:true));
+
+            LR0 parser = new LR0(g);
+
+            var tree = parser.Parse("((x)*t)*foo");
         }
     }
 }
