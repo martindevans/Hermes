@@ -1,7 +1,7 @@
 *.suo
-Hermes/bin/*
-HermesTests/bin/*
-Hermes/obj/*
-HermesTests/obj/*
+Hermes/bin/
+HermesTests/bin/
+Hermes/obj/
+HermesTests/obj/
 *.trx
-TestResults/*
+TestResults
