@@ -82,7 +82,7 @@ namespace Hermes.Parsers
 
             } while (action != ParserAction.Accept);
 
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

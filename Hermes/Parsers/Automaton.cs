@@ -41,14 +41,14 @@ namespace Hermes.Parsers
                 if (!transitionRules.TryGetValue(current, out transition))
                 {
                     if (!allStates.Contains(current))
-                        throw new KeyNotFoundException("No such state");
+                        throw new ParseException("No such state");
                     else
                         return null;
                 }
 
                 ParseState next;
                 if (!transition.TryGetValue(symbol, out next))
-                    throw new KeyNotFoundException("Invalid symbol for this state");
+                    throw new ParseException("Invalid symbol for this state");
 
                 return next;
             }
