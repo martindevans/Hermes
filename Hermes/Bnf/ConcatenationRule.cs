@@ -108,5 +108,15 @@ namespace Hermes.Bnf
         {
             return GetEnumerator();
         }
+
+        public NonTerminal Star()
+        {
+            return ((RuleAlternation)this).Star();
+        }
+
+        public NonTerminal Optional()
+        {
+            return ((RuleAlternation)this).Optional();
+        }
     }
 }

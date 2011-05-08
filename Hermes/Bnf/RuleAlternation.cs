@@ -48,6 +48,31 @@ namespace Hermes.Bnf
             return a.Zip(this, (x, y) => x.Equals(y)).Aggregate((x, y) => x && y);
         }
 
+        public NonTerminal Star()
+        {
+            NonTerminal alt = new NonTerminal("alt");
+            alt.Rules = this;
+
+            NonTerminal listTail = new NonTerminal("listTail");
+            listTail.Rules = alt | "";
+
+            NonTerminal list = new NonTerminal("list");
+            list.Rules = alt + listTail | "".AsTerminal();
+
+            return list;
+        }
+
+        public NonTerminal Optional()
+        {
+            NonTerminal alt = new NonTerminal("alt");
+            alt.Rules = this;
+
+            NonTerminal opt = new NonTerminal("optional");
+            opt.Rules = alt + "".AsTerminal();
+
+            return opt;
+        }
+
         #region operators
         public static RuleAlternation operator |(RuleAlternation left, ConcatenationRule right)
         {

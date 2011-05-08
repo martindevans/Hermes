@@ -12,5 +12,15 @@ namespace Hermes.Bnf
         {
             return new Terminal(s);
         }
+
+        public static NonTerminal Star(this string s)
+        {
+            return ((RuleAlternation)s).Star();
+        }
+
+        public static NonTerminal Optional(this string s)
+        {
+            return ((RuleAlternation)s).Optional();
+        }
     }
 }

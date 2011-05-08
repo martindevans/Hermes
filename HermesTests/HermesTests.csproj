@@ -54,6 +54,7 @@
     <Compile Include="ConcatenationTesting.cs" />
     <Compile Include="BnfTermTest.cs" />
     <Compile Include="ConcatenationRuleTest.cs" />
+    <Compile Include="Grammars\Lua.cs" />
     <Compile Include="Grammars\WellBalancedBrackets.cs" />
     <Compile Include="Grammars\MatchedBrackets.cs" />
     <Compile Include="Grammars\MathExpression.cs" />

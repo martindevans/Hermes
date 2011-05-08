@@ -107,5 +107,15 @@ namespace Hermes.Bnf
         {
             return !a.Equals(b);
         }
+
+        public NonTerminal Star()
+        {
+            return ((RuleAlternation)this).Star();
+        }
+
+        public NonTerminal Optional()
+        {
+            return ((RuleAlternation)this).Optional();
+        }
     }
 }

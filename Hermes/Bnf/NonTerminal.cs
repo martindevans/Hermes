@@ -30,5 +30,15 @@ namespace Hermes.Bnf
         {
             return new RuleAlternation(nonTerminal);
         }
+
+        public NonTerminal Star()
+        {
+            return ((RuleAlternation)this).Star();
+        }
+
+        public NonTerminal Optional()
+        {
+            return ((RuleAlternation)this).Optional();
+        }
     }
 }

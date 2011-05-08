@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Hermes.Bnf;
 using Hermes.Parsers;
+using HermesTests.Grammars;
 
 namespace HermesTests
 {
@@ -84,6 +85,14 @@ namespace HermesTests
             LR0 parser = new LR0(ConstructTestGrammar(out S, out T, out F));
 
             var tree = parser.Parse("((x)*t)**");
+        }
+
+        [TestMethod]
+        public void ConstructLuaAutomaton()
+        {
+            Grammar g = new Lua();
+
+            Automaton a = LR0.CreateAutomaton(g);
         }
     }
 }
