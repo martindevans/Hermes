@@ -65,6 +65,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecursiveDescentTest.cs" />
     <Compile Include="RuleAlternationTest.cs" />
+    <Compile Include="SLR1Test.cs" />
     <Compile Include="TerminalTest.cs" />
     <Compile Include="LexerTest.cs" />
   </ItemGroup>
