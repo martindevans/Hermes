@@ -16,11 +16,9 @@ namespace Hermes.Parsers
         {
         }
 
-        protected abstract KeyValuePair<ParserAction, int> Action(int state, Token token);
+        protected abstract ParserAction Action(ParseState state, Token token, out Production production, out ParseState nextState);
 
-        protected abstract int Goto(int state, NonTerminal nonTerminal);
-
-        protected abstract Production GetProduction(int index);
+        protected abstract ParseState Goto(ParseState state, NonTerminal nonTerminal);
 
         public enum ParserAction
         {
@@ -29,6 +27,11 @@ namespace Hermes.Parsers
             Accept,
             Error,
             Start
+        }
+
+        private ParseState MakeStateState(NonTerminal root, Grammar g)
+        {
+            return new HashSet<Item>(root.Rules.Select(a => new Item(new Production(root, a), 0))).Closure(g);
         }
 
         protected override ParseTreeNode Parse(Lexer lexer, NonTerminal root)
@@ -45,37 +48,39 @@ namespace Hermes.Parsers
                     throw new ParseException("Empty string not matched by grammar");
             }
 
-            Token a = tokens.Current;
-            Stack<int> states = new Stack<int>();
-            KeyValuePair<ParserAction, int> action = new KeyValuePair<ParserAction, int>(ParserAction.Start, 0);
+            Stack<ParseState> states = new Stack<ParseState>();
+            states.Push(MakeStateState(root, Grammar));
+            ParserAction action = ParserAction.Start;
 
             do
             {
-                action = Action(states.Peek(), a);
+                Production reduceProduction;
+                ParseState shiftState;
+                action = Action(states.Peek(), eof ? null : tokens.Current, out reduceProduction, out shiftState);
 
-                switch (action.Key)
+                switch (action)
                 {
                     case ParserAction.Accept:
                         break;
                     case ParserAction.Error:
-                        throw new ParseException(a.ToString());
+                        throw new ParseException(tokens.Current.ToString());
                     case ParserAction.Start:
                     default:
                         throw new NotImplementedException();
 
                     case ParserAction.Shift:
-                        states.Push(action.Value);
+                        states.Push(shiftState);
+                        eof = !tokens.MoveNext();
                         break;
 
                     case ParserAction.Reduce:
-                        var production = GetProduction(action.Value);
-                        for (int i = 0; i < production.Body.Length; i++)
+                        for (int i = 0; i < reduceProduction.Body.Length; i++)
                             states.Pop();
-                        states.Push(Goto(states.Peek(), production.Head));
+                        states.Push(Goto(states.Peek(), reduceProduction.Head));
                         break;
                 }
 
-            } while (action.Key != ParserAction.Accept);
+            } while (action != ParserAction.Accept);
 
             throw new NotImplementedException();
         }

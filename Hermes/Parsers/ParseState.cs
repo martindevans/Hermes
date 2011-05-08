@@ -9,9 +9,11 @@ namespace Hermes.Parsers
         :IEnumerable<Item>
     {
         public readonly Item[] Items;
+        public readonly bool AcceptingState;
 
-        public ParseState(IEnumerable<Item> items)
+        public ParseState(IEnumerable<Item> items, bool accepting)
         {
+            AcceptingState = accepting;
             Items = items.ToArray();
         }
 

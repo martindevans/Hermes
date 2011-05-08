@@ -32,7 +32,7 @@ namespace Hermes.Bnf
             }
             while (closure.UnionWithAddedCount(toAdd) > 0);
 
-            return new ParseState(closure);
+            return new ParseState(closure, IsAcceptingState(closure, grammar));
         }
 
         public static ParseState Goto(this IEnumerable<Item> state, BnfTerm symbol, Grammar grammar)
@@ -41,13 +41,25 @@ namespace Hermes.Bnf
 
             foreach (var item in state)
             {
+                if (item.Production.Body.Length == item.Position)
+                    continue;
+
                 BnfTerm term = item.Production.Body[item.Position];
 
                 if (term.Equals(symbol))
                     items.Add(new Item(item.Production, item.Position + 1));
             }
 
-            return new ParseState(items.Closure(grammar));
+            var closure = items.Closure(grammar);
+
+            return new ParseState(closure, IsAcceptingState(closure, grammar));
+        }
+
+        private static bool IsAcceptingState(IEnumerable<Item> items, Grammar grammar)
+        {
+            return items
+                .Where(a => a.Production.Head.Equals(grammar.Root))
+                .Any(a => a.Position == a.Production.Body.Length);
         }
     }
 }

@@ -25,5 +25,10 @@ namespace Hermes.Bnf
         {
             return object.ReferenceEquals(obj, this);
         }
+
+        public static implicit operator RuleAlternation(NonTerminal nonTerminal)
+        {
+            return new RuleAlternation(nonTerminal);
+        }
     }
 }

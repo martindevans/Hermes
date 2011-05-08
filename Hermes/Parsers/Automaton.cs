@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Hermes.Bnf;
+using Hermes.Tokenising;
 
 namespace Hermes.Parsers
 {
     public class Automaton
     {
+        HashSet<ParseState> allStates = new HashSet<ParseState>();
         Dictionary<ParseState, Dictionary<BnfTerm, ParseState>> transitionRules = new Dictionary<ParseState, Dictionary<BnfTerm, ParseState>>();
 
         public Automaton(IEnumerable<ParseStateTransition> transitions)
         {
             foreach (var transition in transitions)
             {
+                allStates.Add(transition.Start);
+                allStates.Add(transition.End);
+
                 Dictionary<BnfTerm, ParseState> d;
                 if (!transitionRules.TryGetValue(transition.Start, out d))
                 {
@@ -34,7 +39,12 @@ namespace Hermes.Parsers
             {
                 Dictionary<BnfTerm, ParseState> transition;
                 if (!transitionRules.TryGetValue(current, out transition))
-                    throw new KeyNotFoundException("No such state");
+                {
+                    if (!allStates.Contains(current))
+                        throw new KeyNotFoundException("No such state");
+                    else
+                        return null;
+                }
 
                 ParseState next;
                 if (!transition.TryGetValue(symbol, out next))
@@ -48,7 +58,7 @@ namespace Hermes.Parsers
         {
             get
             {
-                return transitionRules.Keys.Union(transitionRules.Values.SelectMany(a => a.Values), EqualityComparer<ParseState>.Default);
+                return allStates;
             }
         }
 

@@ -10,9 +10,12 @@ namespace Hermes.Parsers
     public class LR0
         :LRParserBase
     {
+        Automaton automaton;
+
         public LR0(Grammar grammar)
             :base(grammar)
         {
+            automaton = CreateAutomaton(grammar);
         }
 
         public static Automaton CreateAutomaton(Grammar g)
@@ -51,19 +54,40 @@ namespace Hermes.Parsers
             return new Automaton(transitions);
         }
 
-        protected override KeyValuePair<ParserAction, int> Action(int state, Token token)
+        protected override ParserAction Action(ParseState state, Token token, out Production production, out ParseState nextState)
         {
-            throw new NotImplementedException();
+            if (token != null)
+            {
+                nextState = automaton[state, token.Terminal];
+                if (nextState != null)
+                {
+                    production = default(Production);
+                    return ParserAction.Shift;
+                }
+            }
+
+            if (state.Count() == 1 && state.First().Position == state.First().Production.Body.Length)
+            {
+                nextState = null;
+                production = state.First().Production;
+                return ParserAction.Reduce;
+            }
+
+            if (state.AcceptingState)
+            {
+                production = default(Production);
+                nextState = null;
+                return ParserAction.Accept;
+            }
+            else
+                throw new ParseException("Unexpected EOF");
+
+            throw new ParseException(String.Format("Unexpected {0} at line {1} column {2}", token.Value, token.Line, token.Column));
         }
 
-        protected override int Goto(int state, NonTerminal nonTerminal)
+        protected override ParseState Goto(ParseState state, NonTerminal nonTerminal)
         {
-            throw new NotImplementedException();
-        }
-
-        protected override Production GetProduction(int index)
-        {
-            throw new NotImplementedException();
+            return automaton[state, nonTerminal];
         }
     }
 }
