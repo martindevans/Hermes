@@ -92,9 +92,9 @@ namespace Hermes.Bnf
 
         public static bool operator ==(Terminal a, Terminal b)
         {
-            if (a == null)
+            if (object.ReferenceEquals(a, null))
             {
-                if (b == null)
+                if (object.ReferenceEquals(b, null))
                     return true;
                 else
                     return false;
@@ -105,6 +105,14 @@ namespace Hermes.Bnf
 
         public static bool operator !=(Terminal a, Terminal b)
         {
+            if (object.ReferenceEquals(a, null))
+            {
+                if (object.ReferenceEquals(b, null))
+                    return false;
+                else
+                    return true;
+            }
+
             return !a.Equals(b);
         }
 

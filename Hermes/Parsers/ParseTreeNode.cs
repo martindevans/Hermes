@@ -18,9 +18,16 @@ namespace Hermes.Parsers
         public ParseTreeNode Parent
         {
             get { return parent; }
-            private set
+            set
             {
+                if (parent == value)
+                    return;
+
+                if (parent != null)
+                    parent.children.Remove(this);
+
                 parent = value;
+
                 if (parent != null)
                     parent.children.Add(this);
             }
@@ -44,6 +51,16 @@ namespace Hermes.Parsers
         public bool IsLeaf
         {
             get { return children.FirstOrDefault() == null; }
+        }
+
+        public ParseTreeNode(NonTerminal nonTerminal)
+        {
+            this.nonTerminal = nonTerminal;
+        }
+
+        public ParseTreeNode(Token token)
+        {
+            this.token = token;
         }
 
         public ParseTreeNode(ParseTreeNode parent, NonTerminal nonTerminal)

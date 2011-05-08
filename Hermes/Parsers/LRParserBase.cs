@@ -52,6 +52,8 @@ namespace Hermes.Parsers
             states.Push(MakeStateState(root, Grammar));
             ParserAction action = ParserAction.Start;
 
+            Stack<ParseTreeNode> nodes = new Stack<ParseTreeNode>();
+
             do
             {
                 Production reduceProduction;
@@ -69,11 +71,36 @@ namespace Hermes.Parsers
                         throw new NotImplementedException();
 
                     case ParserAction.Shift:
+                        var newLeafNode = new ParseTreeNode(tokens.Current);
+                        nodes.Push(newLeafNode);
+
                         states.Push(shiftState);
                         eof = !tokens.MoveNext();
                         break;
 
                     case ParserAction.Reduce:
+                        var newNode = new ParseTreeNode(reduceProduction.Head);
+                        var children = nodes.Take(reduceProduction.Body.Length).Reverse().Select((n, i) => new KeyValuePair<int, ParseTreeNode>(i, n));
+                        foreach (var child in children)
+                        {
+                            child.Value.Parent = newNode;
+                            nodes.Pop();
+
+                            var bnfTerm = reduceProduction.Body[child.Key];
+                            var terminal = bnfTerm as Terminal;
+
+                            string match;
+                            if (terminal != null)
+                            {
+                                if (!terminal.Match(child.Value.Token.Value, 0, out match))
+                                    throw new ParseException("Unexpected crap");
+                            }
+                            else if (!reduceProduction.Body[child.Key].Equals(child.Value.NonTerminal))
+                                throw new ParseException("Unexpected crap");
+                        }
+
+                        nodes.Push(newNode);
+
                         for (int i = 0; i < reduceProduction.Body.Length; i++)
                             states.Pop();
                         states.Push(Goto(states.Peek(), reduceProduction.Head));
@@ -82,7 +109,10 @@ namespace Hermes.Parsers
 
             } while (action != ParserAction.Accept);
 
-            return null;
+            if (nodes.Count != 1)
+                throw new ParseException("o_0");
+
+            return nodes.Pop();
         }
     }
 }

@@ -48,23 +48,13 @@ namespace HermesTests
             Assert.IsNotNull(tree);
 
             Assert.IsNotNull(tree.Root);
-            Assert.AreEqual(1, tree.Root.Children.Count);
+            Assert.AreEqual(3, tree.Root.Children.Count);
 
-            var t1 = tree.Root.Children.First();                // T ::= T * F          ((x) * t) * foo
-            Assert.AreEqual(3, t1.Children.Count);
-            Assert.AreEqual(T, t1.Children[0]);
-            Assert.AreEqual("*", t1.Children[1].Token.Value);
-            Assert.AreEqual(F, t1.Children[2]);
+            Assert.IsNotNull(tree.Root.Children[0].NonTerminal);
+            Assert.AreEqual("*", tree.Root.Children[1].Token.Value);
+            Assert.IsNotNull(tree.Root.Children[2].NonTerminal);
 
-            var f1 = t1.Children[2];                            // T ::= F              foo
-            Assert.AreEqual(1, f1.Children.Count);              // F ::= ID             foo
-            Assert.AreEqual("foo", f1.Children[0].Token);       // ID                   foo
-
-            var t2 = t1.Children[0];                            // T ::= T * F          ((x) * t)
-            Assert.AreEqual(3, t2.Children.Count);
-            Assert.AreEqual(T, t2.Children[0]);
-            Assert.AreEqual("*", t2.Children[1].Token.Value);
-            Assert.AreEqual(F, t2.Children[2]);
+            Assert.AreEqual("foo", tree.Root.Children[2].Children[0].Token.Value);
         }
 
         [TestMethod]
