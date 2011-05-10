@@ -22,7 +22,7 @@ namespace Hermes.Parsers
         {
             //initialise to closure of start item
             HashSet<ParseState> states = new HashSet<ParseState>();
-            states.Add(new[] { new Item(g.Productions.Where(a => a.Head.Equals(g.Root)).First(), 0) }.Closure(g));
+            states.Add(g.Productions.Where(a => a.Head.Equals(g.Root)).Select(a => new Item(a, 0)).Closure(g));
 
             HashSet<ParseStateTransition> transitions = new HashSet<ParseStateTransition>();
 
@@ -51,35 +51,44 @@ namespace Hermes.Parsers
             }
             while (states.UnionWithAddedCount(sToAdd) != 0 | transitions.UnionWithAddedCount(tToAdd) != 0);
 
-            return new Automaton(transitions);
+            return new Automaton(transitions, g);
         }
 
         protected override ParserAction Action(ParseState state, Token token, out Production production, out ParseState nextState)
         {
+            bool shift = false;
+            bool reduce = false;
+
             if (token != null)
             {
                 nextState = automaton[state, token.Terminal];
                 if (nextState != null)
                 {
                     production = default(Production);
-                    return ParserAction.Shift;
+                    shift = true;
                 }
             }
+            else
+                nextState = null;
 
             if (state.Count() == 1 && state.First().Position == state.First().Production.Body.Length)
             {
                 nextState = null;
                 production = state.First().Production;
-                return ParserAction.Reduce;
-            }
-
-            if (state.AcceptingState)
-            {
-                production = default(Production);
-                nextState = null;
-                return ParserAction.Accept;
+                reduce = true;
             }
             else
+                production = default(Production);
+
+            if (shift && reduce)
+                throw new ParseException(String.Format("Shift/Reduce conflict between shift {0} and reduce {1}", nextState, production));
+            else if (shift)
+                return ParserAction.Shift;
+            else if (state.AcceptingState)
+                return ParserAction.Accept;
+            else if (reduce)
+                return ParserAction.Reduce;
+            else if (token == null)
                 throw new ParseException("Unexpected EOF");
 
             throw new ParseException(String.Format("Unexpected {0} at line {1} column {2}", token.Value, token.Line, token.Column));

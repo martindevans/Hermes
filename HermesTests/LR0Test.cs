@@ -14,15 +14,17 @@ namespace HermesTests
     {
         public static Grammar ConstructTestGrammar(out NonTerminal S, out NonTerminal T, out NonTerminal F)
         {
-            S = new NonTerminal("S");
             T = new NonTerminal("T");
             F = new NonTerminal("F");
 
-            S.Rules = T;
             T.Rules = T + "*" + F | F;
             F.Rules = "(" + T + ")" | new Terminal("ID", "([A-Z]|[a-z])+");
 
-            return new Grammar(S, new Terminal(" ", isIgnored:true));
+            var g = new Grammar(T, new Terminal(" ", isIgnored:true));
+
+            S = g.Root;
+
+            return g;
         }
 
         [TestMethod]
@@ -43,7 +45,7 @@ namespace HermesTests
             NonTerminal S, T, F;
             LR0 parser = new LR0(ConstructTestGrammar(out S, out T, out F));
 
-            ParseTree tree = parser.Parse("((x) * t) * foo");
+            ParseTree tree = parser.Parse("((x) * y) * foo");
 
             Assert.IsNotNull(tree);
 
@@ -55,6 +57,22 @@ namespace HermesTests
             Assert.IsNotNull(tree.Root.Children[2].NonTerminal);
 
             Assert.AreEqual("foo", tree.Root.Children[2].Children[0].Token.Value);
+        }
+
+        [TestMethod]
+        public void ParseMatchedBrackets()
+        {
+            var lr0 = new LR0(new MatchedBrackets("(", ")"));
+
+            lr0.Parse("()");
+        }
+
+        [TestMethod]
+        public void ParseMathExpression()
+        {
+            var lr0 = new LR0(new MathExpression());
+
+            lr0.Parse("1 + 2");
         }
 
         [TestMethod]

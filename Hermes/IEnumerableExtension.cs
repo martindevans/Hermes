@@ -50,12 +50,10 @@ namespace Hermes.Bnf
                     items.Add(new Item(item.Production, item.Position + 1));
             }
 
-            var closure = items.Closure(grammar);
-
-            return new ParseState(closure, IsAcceptingState(closure, grammar));
+            return items.Closure(grammar);
         }
 
-        private static bool IsAcceptingState(IEnumerable<Item> items, Grammar grammar)
+        public static bool IsAcceptingState(this IEnumerable<Item> items, Grammar grammar)
         {
             return items
                 .Where(a => a.Production.Head.Equals(grammar.Root))

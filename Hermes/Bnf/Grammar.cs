@@ -49,10 +49,13 @@ namespace Hermes.Bnf
         #region constructor
         public Grammar(NonTerminal root, params Terminal[] whitespace)
         {
-            this.Root = root;
+            NonTerminal augmentedRoot = new NonTerminal("Root'");
+            augmentedRoot.Rules = root;
+
+            this.Root = augmentedRoot;
             this.whitespace = whitespace;
 
-            ConstructGrammar(root);
+            ConstructGrammar(Root);
             CalculateNullable();
             CalculateFirstSymbols();
             CalculateFollowSets();

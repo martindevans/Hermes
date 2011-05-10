@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Hermes.Bnf;
+using System.Text.RegularExpressions;
 
 namespace HermesTests.Grammars
 {
@@ -22,9 +23,16 @@ namespace HermesTests.Grammars
 
             Terminal number = new Terminal("number", @"[0-9]+(\.[0-9]+)?");
 
-            expression.Rules = expression + "+" + term | expression + "-" + term | term;
-            term.Rules       = term + "*" + factor | term + "/" + factor | factor;
-            factor.Rules     = "(" + expression + ")" | number;
+            Terminal multiply = new Terminal("*", Regex.Escape("*"));
+            Terminal divide = new Terminal("/", Regex.Escape("/"));
+            Terminal add = new Terminal("+", Regex.Escape("+"));
+            Terminal subtract = new Terminal("-", Regex.Escape("-"));
+            Terminal openBracket = new Terminal("(", Regex.Escape("("));
+            Terminal closeBracket = new Terminal(")", Regex.Escape(")"));
+
+            expression.Rules = expression + add + term | expression + subtract + term | term;
+            term.Rules       = term + multiply + factor | term + divide + factor | factor;
+            factor.Rules     = openBracket + expression + closeBracket | number;
 
             return expression;
         }

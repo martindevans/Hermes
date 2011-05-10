@@ -11,9 +11,12 @@ namespace Hermes.Parsers
     {
         HashSet<ParseState> allStates = new HashSet<ParseState>();
         Dictionary<ParseState, Dictionary<BnfTerm, ParseState>> transitionRules = new Dictionary<ParseState, Dictionary<BnfTerm, ParseState>>();
+        Grammar grammar;
 
-        public Automaton(IEnumerable<ParseStateTransition> transitions)
+        public Automaton(IEnumerable<ParseStateTransition> transitions, Grammar grammar)
         {
+            this.grammar = grammar;
+
             foreach (var transition in transitions)
             {
                 allStates.Add(transition.Start);
@@ -48,7 +51,16 @@ namespace Hermes.Parsers
 
                 ParseState next;
                 if (!transition.TryGetValue(symbol, out next))
-                    throw new ParseException("Invalid symbol for this state");
+                {
+                    HashSet<Terminal> expected = new HashSet<Terminal>();
+                    foreach (var item in current)
+	                {
+                        if (item.Position < item.Production.Body.Length)
+                            expected.UnionWith(grammar.GetFirstSet(item.Production.Body[item.Position]));
+	                }
+
+                    throw new ParseException("Invalid symbol " + symbol.ToString() +  " expected one of [" + String.Join(", ", expected.Select(a => a.Name)) + "]");
+                }
 
                 return next;
             }

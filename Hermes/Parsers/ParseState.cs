@@ -8,6 +8,7 @@ namespace Hermes.Parsers
     public class ParseState
         :IEnumerable<Item>
     {
+        private readonly int hash;
         public readonly Item[] Items;
         public readonly bool AcceptingState;
 
@@ -15,13 +16,23 @@ namespace Hermes.Parsers
         {
             AcceptingState = accepting;
             Items = items.ToArray();
+
+            unchecked
+            {
+                int h = AcceptingState.GetHashCode();
+                int c = 0;
+                foreach (var item in items)
+                {
+                    c++;
+                    h ^= item.GetHashCode() * (c * 13);
+                }
+                hash = h;
+            }
         }
 
         public override int GetHashCode()
         {
-            if (Items.Length == 0)
-                return 0;
-            return Items.Select(a => a.GetHashCode()).Aggregate((a, b) => a ^ b);
+            return hash;
         }
 
         public override bool Equals(object obj)
@@ -52,7 +63,7 @@ namespace Hermes.Parsers
 
         public override string ToString()
         {
-            return "State " + GetHashCode();
+            return "Accepting = " + AcceptingState + ", Count = " + Items.Length;
         }
     }
 }

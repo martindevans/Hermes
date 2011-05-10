@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Hermes.Bnf;
 using Hermes.Parsers;
+using HermesTests.Grammars;
 
 namespace HermesTests
 {
@@ -49,6 +50,14 @@ namespace HermesTests
             LR0 parser = new SLR1(LR0Test.ConstructTestGrammar(out S, out T, out F));
 
             var tree = parser.Parse("((x)*t)**");
+        }
+
+        [TestMethod]
+        public void SLR1InvalidGrammar()
+        {
+            LRParserBase parser = new SLR1(new CPointerHandling());
+
+            var tree = parser.Parse("x = y");
         }
     }
 }
