@@ -147,25 +147,27 @@ namespace Hermes.Bnf
 
                 foreach (var production in Productions)
                 {
+                    for (int j = production.Body.Length - 1; j >= 0; j--)
+                    {
+                        NonTerminal nt = production.Body[j] as NonTerminal;
+                        if (nt == null)
+                            break;
+
+                        //found a nonterminal midway through a production
+                        //if it's followed only by nullable terms, the follow of the entire production is in the follow of this non terminal
+                        changed = follow[nt].UnionWithAddedCount(follow[production.Head]) != 0;
+
+                        //working backwards, break as soon as we find a non nullable term
+                        if (!production.Body[j].IsNullable)
+                            break;
+                    }
+
                     for (int i = 0; i < production.Body.Length; i++)
                     {
                         NonTerminal nt = production.Body[i] as NonTerminal;
                         if (nt == null)
                             continue;
-
-                        var set = follow[nt];
-
-                        for (int j = production.Body.Length - 1; j >= i; j--)
-                        {
-                            //found a nonterminal midway through a production
-                            //if it's followed only by nullable terms, the follow of the entire production is in the follow of this non terminal
-                            changed = set.UnionWithAddedCount(follow[production.Head]) != 0;
-
-                            //working backwards, break as soon as we find a non nullable term
-                            if (!production.Body[j].IsNullable)
-                                break;
-                        }
-
+                        
                         //keep adding symbols to the follow set until we find a non nullable term partway through the production
                         for (int j = i + 1; j < production.Body.Length; j++)
                         {
