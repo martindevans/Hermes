@@ -72,7 +72,7 @@ namespace HermesTests
         {
             var lr0 = new LR0(new MathExpression());
 
-            lr0.Parse("1 + 2");
+            lr0.Parse("1 * 2");
         }
 
         [TestMethod]

@@ -27,7 +27,10 @@ namespace HermesTests.Grammars
             Terminal close = new Terminal(Regex.Escape(closeBracket));
 
             NonTerminal s = new NonTerminal("S");
-            s.Rules = open + s + close | open + close;
+            NonTerminal sPrime = new NonTerminal("S'");
+
+            s.Rules = open + sPrime + close;
+            sPrime.Rules = s | Terminal.Empty;
 
             return s;
         }

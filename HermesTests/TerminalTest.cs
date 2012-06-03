@@ -31,7 +31,7 @@ namespace HermesTests
         {
             Terminal t = new Terminal("AAA", "AAA");
 
-            string aString = "AAABBB";
+            const string aString = "AAABBB";
 
             string match;
             Assert.IsTrue(t.Match(aString, 0, out match));
@@ -85,6 +85,12 @@ namespace HermesTests
             Assert.IsNotNull(operatorResult);
             Assert.IsNotNull(methodResult);
             Assert.AreEqual(operatorResult, methodResult);
+        }
+
+        [TestMethod]
+        public void EmptyTerminalIsNullable()
+        {
+            Assert.IsTrue(Terminal.Empty.IsNullable);
         }
     }
 }

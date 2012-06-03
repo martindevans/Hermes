@@ -39,7 +39,7 @@ namespace HermesTests
             NonTerminal S, T, F;
             LR0 parser = new SLR1(LR0Test.ConstructTestGrammar(out S, out T, out F));
 
-            var tree = parser.Parse("((x)*t)*");
+            parser.Parse("((x)*t)*");
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace HermesTests
             NonTerminal S, T, F;
             LR0 parser = new SLR1(LR0Test.ConstructTestGrammar(out S, out T, out F));
 
-            var tree = parser.Parse("((x)*t)**");
+            parser.Parse("((x)*t)**");
         }
 
         [TestMethod]
@@ -57,7 +57,7 @@ namespace HermesTests
         {
             LRParserBase parser = new SLR1(new CPointerHandling());
 
-            var tree = parser.Parse("x = y");
+            parser.Parse("x = y");
         }
     }
 }

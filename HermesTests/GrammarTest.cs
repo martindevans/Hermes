@@ -28,7 +28,7 @@ namespace HermesTests
             Grammar g = new Grammar(expr, whitespace);
 
             Assert.AreEqual(3, g.Terminals.Count());
-            Assert.AreEqual(2, g.NonTerminals.Count());
+            Assert.AreEqual(3, g.NonTerminals.Count()); //Although the grammar only specifies 2 Nonterminals, grammar creates 1 internally for the root
 
             Lexer lexer = g.CreateLexer("1 + 2 * 3");
 

@@ -23,13 +23,13 @@ namespace Hermes.Parsers
         private void ConstructPredictiveParseTable()
         {
             foreach (var nonTerminals in Grammar.NonTerminals)
-	        {
+            {
                 var dict = new Dictionary<Terminal, Production?>();
                 predictiveParseTable[nonTerminals] = dict;
 
                 foreach (var terminal in Grammar.Terminals)
                     dict[terminal] = null;
-	        }
+            }
 
             foreach (var production in Grammar.Productions)
             {

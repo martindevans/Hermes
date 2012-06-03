@@ -47,7 +47,7 @@ namespace HermesTests
 
             g = new Grammar(S, new Terminal(" "));
 
-            Item start = new Item(g.Productions.Where(a => a.Head.Equals(sCopy)).First(), 0);
+            Item start = new Item(g.Productions.First(a => a.Head.Equals(sCopy)), 0);
 
             return new[] { start }.Closure(g);
         }
@@ -64,8 +64,8 @@ namespace HermesTests
             Assert.AreEqual(5, initialState.Count());
             Assert.IsTrue(initialState.All(a => a.Position == 0));
 
-            Assert.AreEqual(2, initialState.Where(a => a.Production.Body[0].Equals(T)).Count());
-            Assert.AreEqual(1, initialState.Where(a => a.Production.Body[0].Equals(F)).Count());
+            Assert.AreEqual(2, initialState.Count(a => a.Production.Body[0].Equals(T)));
+            Assert.AreEqual(1, initialState.Count(a => a.Production.Body[0].Equals(F)));
         }
 
         [TestMethod]

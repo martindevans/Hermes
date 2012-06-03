@@ -20,28 +20,23 @@ namespace HermesTests
 
             Parser parser = new RecursiveDescentParser(g);
 
-            var p = parser.Parse("(())");
+            var p = parser.Parse("()");
 
             Assert.IsNotNull(p);
             Assert.IsFalse(p.Root.IsLeaf);
-            Assert.AreEqual("S", p.Root.NonTerminal.Name);
-            Assert.AreEqual(3, p.Root.Children.Count);
+            Assert.AreEqual("Root'", p.Root.NonTerminal.Name);
+            Assert.AreEqual(1, p.Root.Children.Count);
 
-            Assert.IsTrue(p.Root.Children[0].IsLeaf);
-            Assert.AreEqual("(", p.Root.Children[0].Token.Value);
-            Assert.IsFalse(p.Root.Children[1].IsLeaf);
-            Assert.IsTrue(p.Root.Children[2].IsLeaf);
-            Assert.AreEqual(")", p.Root.Children[2].Token.Value);
+            Assert.IsNotNull(p.Root.Children[0]);
+            Assert.IsFalse(p.Root.Children[0].IsLeaf);
+            Assert.AreEqual("S", p.Root.Children[0].NonTerminal.Name);
+            Assert.AreEqual(3, p.Root.Children[0].Children.Count);
 
-            Assert.IsTrue(p.Root.Children[1].Children[0].IsLeaf);
-            Assert.AreEqual("(", p.Root.Children[1].Children[0].Token.Value);
-            Assert.IsFalse(p.Root.Children[1].Children[1].IsLeaf);
-            Assert.IsTrue(p.Root.Children[1].Children[2].IsLeaf);
-            Assert.AreEqual(")", p.Root.Children[1].Children[2].Token.Value);
-
-            Assert.AreEqual(1, p.Root.Children[1].Children[1].Children.Count);
-            Assert.IsTrue(p.Root.Children[1].Children[1].Children[0].IsLeaf);
-            Assert.AreEqual("", p.Root.Children[1].Children[1].Children[0].Token.Value);
+            Assert.IsTrue(p.Root.Children[0].Children[0].IsLeaf);
+            Assert.AreEqual("(", p.Root.Children[0].Children[0].Token.Value);
+            Assert.IsFalse(p.Root.Children[0].Children[1].IsLeaf);
+            Assert.IsTrue(p.Root.Children[0].Children[2].IsLeaf);
+            Assert.AreEqual(")", p.Root.Children[0].Children[2].Token.Value);
         }
     }
 }

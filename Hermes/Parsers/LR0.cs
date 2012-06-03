@@ -59,6 +59,13 @@ namespace Hermes.Parsers
             bool shift = false;
             bool reduce = false;
 
+            if (token == null && state.AcceptingState)
+            {
+                production = default(Production);
+                nextState = null;
+                return ParserAction.Accept;
+            }
+
             if (token != null)
             {
                 nextState = automaton[state, token.Terminal];
@@ -84,8 +91,6 @@ namespace Hermes.Parsers
                 throw new ParseException(String.Format("Shift/Reduce conflict between shift {0} and reduce {1}", nextState, production));
             else if (shift)
                 return ParserAction.Shift;
-            else if (state.AcceptingState)
-                return ParserAction.Accept;
             else if (reduce)
                 return ParserAction.Reduce;
             else if (token == null)
