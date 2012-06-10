@@ -60,10 +60,20 @@ namespace HermesTests
         }
 
         [TestMethod]
+        public void ParseMatchedBracketsWithContent()
+        {
+            var lr0 = new LR0(new MatchedBracketsWithContent("(", ")"));
+
+            lr0.Parse("(a)");
+        }
+
+        [TestMethod]
         public void ParseMatchedBrackets()
         {
             var lr0 = new LR0(new MatchedBrackets("(", ")"));
 
+            //This is failing because some part of the LR0 parser is not liking having to match an empty string midway through the parse
+            //This should parse as "(" + "" + ")"
             lr0.Parse("()");
         }
 

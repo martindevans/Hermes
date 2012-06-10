@@ -54,12 +54,14 @@
     <Compile Include="ConcatenationTesting.cs" />
     <Compile Include="BnfTermTest.cs" />
     <Compile Include="ConcatenationRuleTest.cs" />
+    <Compile Include="Grammars\MatchedBrackets.cs" />
     <Compile Include="Grammars\CPointerHandling.cs" />
     <Compile Include="Grammars\Lua.cs" />
     <Compile Include="Grammars\WellBalancedBrackets.cs" />
-    <Compile Include="Grammars\MatchedBrackets.cs" />
+    <Compile Include="Grammars\MatchedBracketsWithContent.cs" />
     <Compile Include="Grammars\MathExpression.cs" />
     <Compile Include="GrammarTest.cs" />
+    <Compile Include="InvalidGrammarExceptionTest.cs" />
     <Compile Include="ItemTest.cs" />
     <Compile Include="LR0Test.cs" />
     <Compile Include="NonTerminalTest.cs" />

@@ -8,10 +8,10 @@ using System.Text.RegularExpressions;
 
 namespace HermesTests.Grammars
 {
-    public class MatchedBrackets
+    public class MatchedBracketsWithContent
        : Grammar
     {
-        public MatchedBrackets(string openBracket, string closeBracket)
+        public MatchedBracketsWithContent(string openBracket, string closeBracket)
             : base(ConstructGrammar(openBracket, closeBracket), GetWhitespace())
         {
         }
@@ -30,7 +30,7 @@ namespace HermesTests.Grammars
             NonTerminal sPrime = new NonTerminal("S'");
 
             s.Rules = open + sPrime + close;
-            sPrime.Rules = s | "";
+            sPrime.Rules = s | "a";
 
             return s;
         }

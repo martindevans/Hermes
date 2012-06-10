@@ -17,7 +17,7 @@ namespace Hermes.Bnf
 
         public static readonly Terminal Empty = new Terminal("");
 
-        bool nullable;
+        readonly bool nullable;
         public override bool IsNullable
         {
             get

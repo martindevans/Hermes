@@ -16,7 +16,7 @@ namespace HermesTests
         [TestMethod]
         public void ParseMatchedBracketsWithRecursiveDescent()
         {
-            Grammar g = new MatchedBrackets("(", ")");
+            Grammar g = new MatchedBracketsWithContent("(", ")");
 
             Parser parser = new RecursiveDescentParser(g);
 
